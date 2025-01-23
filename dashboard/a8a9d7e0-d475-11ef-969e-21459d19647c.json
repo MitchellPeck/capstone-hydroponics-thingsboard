@@ -9542,6 +9542,173 @@
           "row" : 0,
           "col" : 0,
           "id" : "cba36c95-53de-2bb8-a6d9-450c2b250184"
+        },
+        "adc20d3c-0fd6-b2a9-7447-40a80bc22183" : {
+          "typeFullFqn" : "system.alarm_widgets.alarms_table",
+          "type" : "alarm",
+          "sizeX" : 10.5,
+          "sizeY" : 6.5,
+          "config" : {
+            "timewindow" : {
+              "realtime" : {
+                "interval" : 1000,
+                "timewindowMs" : 86400000
+              },
+              "aggregation" : {
+                "type" : "NONE",
+                "limit" : 200
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "rgba(0,0,0,0)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0",
+            "settings" : {
+              "enableSelection" : true,
+              "enableSearch" : true,
+              "displayDetails" : true,
+              "allowAcknowledgment" : true,
+              "allowClear" : true,
+              "allowAssign" : true,
+              "displayActivity" : true,
+              "displayPagination" : true,
+              "defaultPageSize" : 10,
+              "defaultSortOrder" : "-createdTime",
+              "enableSelectColumnDisplay" : true,
+              "enableStickyAction" : false,
+              "enableFilter" : true,
+              "entitiesTitle" : null,
+              "alarmsTitle" : "Alarms",
+              "padding" : "0",
+              "background" : {
+                "type" : "color",
+                "color" : "rgba(0,0,0,0)",
+                "overlay" : {
+                  "enabled" : false,
+                  "color" : "rgba(255,255,255,0.72)",
+                  "blur" : 3
+                }
+              }
+            },
+            "title" : "Alarms table",
+            "dropShadow" : false,
+            "enableFullscreen" : true,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400,
+              "padding" : "5px 10px 5px 10px"
+            },
+            "useDashboardTimewindow" : true,
+            "showLegend" : false,
+            "alarmSource" : {
+              "type" : "device",
+              "name" : "",
+              "deviceId" : "22da9000-d461-11ef-969e-21459d19647c",
+              "entityAliasId" : null,
+              "dataKeys" : [ {
+                "name" : "createdTime",
+                "type" : "alarm",
+                "label" : "Created time",
+                "color" : "#2196f3",
+                "settings" : {
+                  "useCellStyleFunction" : false,
+                  "cellStyleFunction" : "",
+                  "useCellContentFunction" : false,
+                  "cellContentFunction" : ""
+                },
+                "_hash" : 0.021092237451093787,
+                "funcBody" : null
+              }, {
+                "name" : "originator",
+                "type" : "alarm",
+                "label" : "Originator",
+                "color" : "#4caf50",
+                "settings" : {
+                  "useCellStyleFunction" : false,
+                  "cellStyleFunction" : "",
+                  "useCellContentFunction" : false,
+                  "cellContentFunction" : ""
+                },
+                "_hash" : 0.2780007688856758,
+                "funcBody" : null
+              }, {
+                "name" : "type",
+                "type" : "alarm",
+                "label" : "Type",
+                "color" : "#f44336",
+                "settings" : {
+                  "useCellStyleFunction" : false,
+                  "cellStyleFunction" : "",
+                  "useCellContentFunction" : false,
+                  "cellContentFunction" : ""
+                },
+                "_hash" : 0.7323586880398418,
+                "funcBody" : null
+              }, {
+                "name" : "severity",
+                "type" : "alarm",
+                "label" : "Severity",
+                "color" : "#ffc107",
+                "settings" : {
+                  "useCellStyleFunction" : false,
+                  "useCellContentFunction" : false
+                },
+                "_hash" : 0.09927019860088193,
+                "funcBody" : null
+              }, {
+                "name" : "status",
+                "type" : "alarm",
+                "label" : "Status",
+                "color" : "#607d8b",
+                "settings" : {
+                  "useCellStyleFunction" : false,
+                  "cellStyleFunction" : "",
+                  "useCellContentFunction" : false,
+                  "cellContentFunction" : ""
+                },
+                "_hash" : 0.6588418951443418,
+                "funcBody" : null
+              }, {
+                "name" : "assignee",
+                "type" : "alarm",
+                "label" : "Assignee",
+                "color" : "#9c27b0",
+                "settings" : { },
+                "_hash" : 0.5008441077416634,
+                "funcBody" : null
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            },
+            "alarmsPollingInterval" : 5,
+            "showTitleIcon" : false,
+            "titleIcon" : "warning",
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "widgetStyle" : { },
+            "displayTimewindow" : true,
+            "actions" : { },
+            "configMode" : "basic",
+            "alarmFilterConfig" : {
+              "statusList" : [ "ACTIVE" ],
+              "severityList" : [ ],
+              "typeList" : [ ],
+              "searchPropagatedAlarms" : false,
+              "assignedToCurrentUser" : false,
+              "assigneeId" : null
+            },
+            "datasources" : [ ],
+            "resizable" : true,
+            "preserveAspectRatio" : false,
+            "margin" : "0",
+            "titleFont" : null,
+            "titleColor" : null
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "adc20d3c-0fd6-b2a9-7447-40a80bc22183"
         }
       },
       "states" : {
@@ -10005,6 +10172,14 @@
                   "preserveAspectRatio" : false,
                   "resizable" : true,
                   "row" : 17,
+                  "col" : 0
+                },
+                "adc20d3c-0fd6-b2a9-7447-40a80bc22183" : {
+                  "sizeX" : 21,
+                  "sizeY" : 13,
+                  "preserveAspectRatio" : false,
+                  "resizable" : true,
+                  "row" : 28,
                   "col" : 0
                 }
               },
