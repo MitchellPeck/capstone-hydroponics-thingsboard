@@ -559,7 +559,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "return msg.temperature > 20;",
-        "tbelScript" : "var v = msg.temperature1;\nvar lims = JSON.parse(metadata.ss_temperature_limits).temperature1;\nvar max = lims.max;\nvar min = lims.min;\n\nreturn v >= max || t <= min;"
+        "tbelScript" : "var v = msg.temperature1;\nvar lims = JSON.parse(metadata.ss_temperature_limits).temperature1;\nvar max = lims.max;\nvar min = lims.min;\n\nreturn v >= max || v <= min;"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -611,7 +611,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "return msg.temperature > 20;",
-        "tbelScript" : "var v = msg.temperature2;\nvar lims = JSON.parse(metadata.ss_temperature_limits).temperature2;\nvar max = lims.max;\nvar min = lims.min;\n\nreturn v >= max || t <= min;"
+        "tbelScript" : "var v = msg.temperature2;\nvar lims = JSON.parse(metadata.ss_temperature_limits).temperature2;\nvar max = lims.max;\nvar min = lims.min;\n\nreturn v >= max || v <= min;"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
