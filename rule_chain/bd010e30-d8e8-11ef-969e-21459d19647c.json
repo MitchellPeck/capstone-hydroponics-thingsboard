@@ -358,6 +358,10 @@
     }, {
       "fromIndex" : 67,
       "toIndex" : 85,
+      "type" : "Failure"
+    }, {
+      "fromIndex" : 67,
+      "toIndex" : 85,
       "type" : "Success"
     }, {
       "fromIndex" : 69,
