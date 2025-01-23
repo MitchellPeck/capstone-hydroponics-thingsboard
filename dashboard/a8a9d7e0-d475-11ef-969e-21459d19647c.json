@@ -1,7 +1,7 @@
 {
   "entityType" : "DASHBOARD",
   "entity" : {
-    "title" : "Capstone Hydroponics",
+    "title" : "System Control",
     "image" : null,
     "mobileHide" : false,
     "mobileOrder" : null,
@@ -9255,7 +9255,7 @@
         "toolbarAlwaysOpen" : true
       }
     },
-    "name" : "Capstone Hydroponics",
+    "name" : "System Control",
     "resources" : null,
     "assignedCustomers" : null,
     "externalId" : null,
