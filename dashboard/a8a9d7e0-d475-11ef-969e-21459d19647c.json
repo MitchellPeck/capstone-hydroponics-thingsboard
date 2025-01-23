@@ -43,8 +43,8 @@
                       "persistentPollingInterval" : 1000
                     },
                     "getAttribute" : {
-                      "scope" : "SERVER_SCOPE",
-                      "key" : "tankCapacity"
+                      "key" : "tankCapacity",
+                      "scope" : "SERVER_SCOPE"
                     },
                     "getTimeSeries" : {
                       "key" : "state"
@@ -55,6 +55,7 @@
                     },
                     "dataToValue" : {
                       "type" : "NONE",
+                      "compareToValue" : true,
                       "dataToValueFunction" : "/* Should return boolean value */\nreturn data;"
                     }
                   },
@@ -68,8 +69,8 @@
                       "persistentPollingInterval" : 1000
                     },
                     "getAttribute" : {
-                      "scope" : null,
-                      "key" : "state"
+                      "key" : "state",
+                      "scope" : null
                     },
                     "getTimeSeries" : {
                       "key" : "liquidVolume"
@@ -80,6 +81,7 @@
                     },
                     "dataToValue" : {
                       "type" : "NONE",
+                      "compareToValue" : true,
                       "dataToValueFunction" : "/* Should return boolean value */\nreturn data;"
                     }
                   },
@@ -117,7 +119,7 @@
                     "stateEntityParamName" : null
                   },
                   "critical" : {
-                    "action" : "GET_ALARM_STATUS",
+                    "action" : "DO_NOTHING",
                     "defaultValue" : false,
                     "executeRpc" : {
                       "method" : "getState",
@@ -126,8 +128,8 @@
                       "persistentPollingInterval" : 1000
                     },
                     "getAttribute" : {
-                      "key" : "state",
-                      "scope" : null
+                      "scope" : null,
+                      "key" : "state"
                     },
                     "getTimeSeries" : {
                       "key" : "state"
@@ -138,8 +140,8 @@
                     },
                     "dataToValue" : {
                       "type" : "NONE",
-                      "compareToValue" : true,
-                      "dataToValueFunction" : "/* Should return boolean value */\nreturn data;"
+                      "dataToValueFunction" : "/* Should return boolean value */\nreturn data;",
+                      "compareToValue" : true
                     }
                   },
                   "criticalClick" : {
@@ -276,8 +278,8 @@
                       "persistentPollingInterval" : 1000
                     },
                     "getAttribute" : {
-                      "scope" : "SHARED_SCOPE",
-                      "key" : "pump2"
+                      "key" : "pump2",
+                      "scope" : "SHARED_SCOPE"
                     },
                     "getTimeSeries" : {
                       "key" : "state"
@@ -288,8 +290,8 @@
                     },
                     "dataToValue" : {
                       "type" : "NONE",
-                      "dataToValueFunction" : "/* Should return boolean value */\nreturn data;",
-                      "compareToValue" : true
+                      "compareToValue" : true,
+                      "dataToValueFunction" : "/* Should return boolean value */\nreturn data;"
                     }
                   },
                   "warning" : {
@@ -302,20 +304,20 @@
                       "persistentPollingInterval" : 1000
                     },
                     "getAttribute" : {
-                      "key" : "state",
-                      "scope" : null
+                      "scope" : null,
+                      "key" : "state"
                     },
                     "getTimeSeries" : {
                       "key" : "state"
                     },
                     "getAlarmStatus" : {
-                      "severityList" : [ "MAJOR", "MINOR", "WARNING", "INDETERMINATE" ],
-                      "typeList" : null
+                      "severityList" : [ "MAJOR" ],
+                      "typeList" : [ "Water Depth 3 Min Alarm", "Water Depth 4 Min Alarm" ]
                     },
                     "dataToValue" : {
                       "type" : "NONE",
-                      "compareToValue" : true,
-                      "dataToValueFunction" : "/* Should return boolean value */\nreturn data;"
+                      "dataToValueFunction" : "/* Should return boolean value */\nreturn data;",
+                      "compareToValue" : true
                     }
                   },
                   "warningClick" : {
@@ -343,7 +345,7 @@
                     },
                     "getAlarmStatus" : {
                       "severityList" : [ "CRITICAL" ],
-                      "typeList" : null
+                      "typeList" : [ "Water Depth 3 Max Alarm", "Water Depth 4 Max Alarm" ]
                     },
                     "dataToValue" : {
                       "type" : "NONE",
@@ -360,7 +362,7 @@
                   },
                   "criticalAnimation" : {
                     "action" : "DO_NOTHING",
-                    "defaultValue" : false,
+                    "defaultValue" : true,
                     "executeRpc" : {
                       "method" : "getState",
                       "requestTimeout" : 5000,
@@ -723,8 +725,8 @@
                       "persistentPollingInterval" : 1000
                     },
                     "getAttribute" : {
-                      "scope" : "SHARED_SCOPE",
-                      "key" : "pump1"
+                      "key" : "pump1",
+                      "scope" : "SHARED_SCOPE"
                     },
                     "getTimeSeries" : {
                       "key" : "state"
@@ -735,8 +737,8 @@
                     },
                     "dataToValue" : {
                       "type" : "NONE",
-                      "dataToValueFunction" : "/* Should return boolean value */\nreturn data;",
-                      "compareToValue" : true
+                      "compareToValue" : true,
+                      "dataToValueFunction" : "/* Should return boolean value */\nreturn data;"
                     }
                   },
                   "warning" : {
@@ -749,20 +751,20 @@
                       "persistentPollingInterval" : 1000
                     },
                     "getAttribute" : {
-                      "key" : "state",
-                      "scope" : null
+                      "scope" : null,
+                      "key" : "state"
                     },
                     "getTimeSeries" : {
                       "key" : "state"
                     },
                     "getAlarmStatus" : {
-                      "severityList" : [ "MAJOR", "MINOR", "WARNING", "INDETERMINATE" ],
-                      "typeList" : null
+                      "severityList" : [ "MAJOR" ],
+                      "typeList" : [ "Water Depth 1 Min Alarm", "Water Depth 2 Min Alarm" ]
                     },
                     "dataToValue" : {
                       "type" : "NONE",
-                      "compareToValue" : true,
-                      "dataToValueFunction" : "/* Should return boolean value */\nreturn data;"
+                      "dataToValueFunction" : "/* Should return boolean value */\nreturn data;",
+                      "compareToValue" : true
                     }
                   },
                   "warningClick" : {
@@ -782,20 +784,20 @@
                       "persistentPollingInterval" : 1000
                     },
                     "getAttribute" : {
-                      "key" : "state",
-                      "scope" : null
+                      "scope" : null,
+                      "key" : "state"
                     },
                     "getTimeSeries" : {
                       "key" : "state"
                     },
                     "getAlarmStatus" : {
                       "severityList" : [ "CRITICAL" ],
-                      "typeList" : null
+                      "typeList" : [ "Water Depth 1 Max Alarm", "Water Depth 2 Max Alarm" ]
                     },
                     "dataToValue" : {
                       "type" : "NONE",
-                      "compareToValue" : true,
-                      "dataToValueFunction" : "/* Should return boolean value */\nreturn data;"
+                      "dataToValueFunction" : "/* Should return boolean value */\nreturn data;",
+                      "compareToValue" : true
                     }
                   },
                   "criticalClick" : {
@@ -807,7 +809,7 @@
                   },
                   "criticalAnimation" : {
                     "action" : "DO_NOTHING",
-                    "defaultValue" : false,
+                    "defaultValue" : true,
                     "executeRpc" : {
                       "method" : "getState",
                       "requestTimeout" : 5000,
