@@ -1,7 +1,7 @@
 {
   "entityType" : "DASHBOARD",
   "entity" : {
-    "title" : "Capstone Hydroponics",
+    "title" : "Telemetry",
     "image" : null,
     "mobileHide" : false,
     "mobileOrder" : null,
@@ -11674,7 +11674,7 @@
         "toolbarAlwaysOpen" : true
       }
     },
-    "name" : "Capstone Hydroponics",
+    "name" : "Telemetry",
     "resources" : null,
     "assignedCustomers" : null,
     "externalId" : null,
