@@ -2065,7 +2065,7 @@
         "fetchTo" : "METADATA",
         "clientAttributeNames" : [ ],
         "sharedAttributeNames" : [ ],
-        "serverAttributeNames" : [ "tds" ],
+        "serverAttributeNames" : [ "tds_limits" ],
         "latestTsKeyNames" : [ ],
         "getLatestValueWithTs" : false
       },
