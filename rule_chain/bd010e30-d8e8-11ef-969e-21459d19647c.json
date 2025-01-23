@@ -140,6 +140,10 @@
       "fromIndex" : 27,
       "toIndex" : 31,
       "type" : "min"
+    }, {
+      "fromIndex" : 29,
+      "toIndex" : 30,
+      "type" : "Success"
     } ],
     "firstNodeIndex" : 6,
     "nodes" : [ {
