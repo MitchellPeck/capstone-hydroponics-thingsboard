@@ -10033,28 +10033,16 @@
         "hideAggregation" : false,
         "hideAggInterval" : false,
         "hideTimezone" : false,
-        "selectedTab" : 0,
-        "realtime" : {
-          "realtimeType" : 0,
-          "interval" : 5000,
-          "timewindowMs" : 300000,
-          "quickInterval" : "CURRENT_DAY",
-          "hideInterval" : false,
-          "hideLastInterval" : false,
-          "hideQuickInterval" : false
-        },
+        "selectedTab" : 1,
         "history" : {
-          "historyType" : 0,
-          "interval" : 1000,
-          "timewindowMs" : 60000,
+          "historyType" : 1,
           "fixedTimewindow" : {
-            "startTimeMs" : 1736992328162,
-            "endTimeMs" : 1737078728162
+            "startTimeMs" : 1737691200000,
+            "endTimeMs" : 1737694799999
           },
-          "quickInterval" : "CURRENT_DAY",
+          "interval" : 8000,
           "hideInterval" : false,
           "hideLastInterval" : false,
-          "hideFixedInterval" : false,
           "hideQuickInterval" : false
         },
         "aggregation" : {
