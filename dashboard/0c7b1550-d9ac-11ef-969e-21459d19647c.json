@@ -6,7 +6,534 @@
     "mobileHide" : false,
     "mobileOrder" : null,
     "configuration" : {
-      "description" : ""
+      "description" : "",
+      "widgets" : {
+        "cb0b49cd-af4f-79a0-614c-2acaacb39cf8" : {
+          "typeFullFqn" : "system.input_widgets.update_json_attribute",
+          "type" : "latest",
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ {
+              "type" : "device",
+              "name" : "",
+              "deviceId" : "22da9000-d461-11ef-969e-21459d19647c",
+              "dataKeys" : [ {
+                "name" : "bed_1_limits",
+                "type" : "attribute",
+                "label" : "bed_1_limits",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.509660726932881
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1737565709428,
+                  "endTimeMs" : 1737652109428
+                },
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideFixedInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "widgetTitle" : "Bed 1 Limits",
+              "showLabel" : true,
+              "labelValue" : "Bed 1 Limits",
+              "showResultMessage" : true,
+              "widgetMode" : "ATTRIBUTE",
+              "attributeScope" : "SERVER_SCOPE",
+              "attributeRequired" : true
+            },
+            "title" : "Update JSON attribute",
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "dropShadow" : true,
+            "enableFullscreen" : false,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "showLegend" : false,
+            "useDashboardTimewindow" : true,
+            "displayTimewindow" : true
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "cb0b49cd-af4f-79a0-614c-2acaacb39cf8"
+        },
+        "04405c26-08cd-571f-2d90-daa2687cf1d6" : {
+          "typeFullFqn" : "system.input_widgets.update_json_attribute",
+          "type" : "latest",
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ {
+              "type" : "device",
+              "name" : "",
+              "deviceId" : "22da9000-d461-11ef-969e-21459d19647c",
+              "dataKeys" : [ {
+                "name" : "bed_2_limits",
+                "type" : "attribute",
+                "label" : "bed_2_limits",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.8429810750419193
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1737565709428,
+                  "endTimeMs" : 1737652109428
+                },
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideFixedInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "widgetTitle" : "Bed 2 Limits",
+              "showLabel" : true,
+              "labelValue" : "Bed 2 Limits",
+              "showResultMessage" : true,
+              "widgetMode" : "ATTRIBUTE",
+              "attributeScope" : "SERVER_SCOPE",
+              "attributeRequired" : true
+            },
+            "title" : "Update JSON attribute",
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "dropShadow" : true,
+            "enableFullscreen" : false,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "showLegend" : false,
+            "useDashboardTimewindow" : true,
+            "displayTimewindow" : true
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "04405c26-08cd-571f-2d90-daa2687cf1d6"
+        },
+        "5fc2aba1-1204-9636-8beb-ca29c0f04724" : {
+          "typeFullFqn" : "system.input_widgets.update_json_attribute",
+          "type" : "latest",
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ {
+              "type" : "device",
+              "name" : "",
+              "deviceId" : "22da9000-d461-11ef-969e-21459d19647c",
+              "dataKeys" : [ {
+                "name" : "bed_3_limits",
+                "type" : "attribute",
+                "label" : "bed_3_limits",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.4472646522488227
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1737565709428,
+                  "endTimeMs" : 1737652109428
+                },
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideFixedInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "widgetTitle" : "Bed 3 Limits",
+              "showLabel" : true,
+              "labelValue" : "Bed 3 Limits",
+              "showResultMessage" : true,
+              "widgetMode" : "ATTRIBUTE",
+              "attributeScope" : "SERVER_SCOPE",
+              "attributeRequired" : true
+            },
+            "title" : "Update JSON attribute",
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "dropShadow" : true,
+            "enableFullscreen" : false,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "showLegend" : false,
+            "useDashboardTimewindow" : true,
+            "displayTimewindow" : true
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "5fc2aba1-1204-9636-8beb-ca29c0f04724"
+        },
+        "ba41a629-4342-4cdb-6e28-268606d91885" : {
+          "typeFullFqn" : "system.input_widgets.update_json_attribute",
+          "type" : "latest",
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ {
+              "type" : "device",
+              "name" : "",
+              "deviceId" : "22da9000-d461-11ef-969e-21459d19647c",
+              "dataKeys" : [ {
+                "name" : "bed_4_limits",
+                "type" : "attribute",
+                "label" : "bed_4_limits",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.7786607280514922
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1737565709428,
+                  "endTimeMs" : 1737652109428
+                },
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideFixedInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "widgetTitle" : "Bed 4 Limits",
+              "showLabel" : true,
+              "labelValue" : "Bed 4 Limits",
+              "showResultMessage" : true,
+              "widgetMode" : "ATTRIBUTE",
+              "attributeScope" : "SERVER_SCOPE",
+              "attributeRequired" : true
+            },
+            "title" : "Update JSON attribute",
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "dropShadow" : true,
+            "enableFullscreen" : false,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "showLegend" : false,
+            "useDashboardTimewindow" : true,
+            "displayTimewindow" : true
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "ba41a629-4342-4cdb-6e28-268606d91885"
+        },
+        "4c0bf780-1d97-304e-0504-cba911e63688" : {
+          "typeFullFqn" : "system.input_widgets.update_json_attribute",
+          "type" : "latest",
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ {
+              "type" : "device",
+              "name" : "",
+              "deviceId" : "22da9000-d461-11ef-969e-21459d19647c",
+              "dataKeys" : [ {
+                "name" : "nutrients_schedule",
+                "type" : "attribute",
+                "label" : "nutrients_schedule",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.6600429910091596
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1737565709428,
+                  "endTimeMs" : 1737652109428
+                },
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideFixedInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "widgetTitle" : "Nutrients Schedule",
+              "showLabel" : true,
+              "labelValue" : "Nutrients Schedule",
+              "showResultMessage" : true,
+              "widgetMode" : "ATTRIBUTE",
+              "attributeScope" : "SERVER_SCOPE",
+              "attributeRequired" : true
+            },
+            "title" : "Update JSON attribute",
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "dropShadow" : true,
+            "enableFullscreen" : false,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "showLegend" : false,
+            "useDashboardTimewindow" : true,
+            "displayTimewindow" : true
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "4c0bf780-1d97-304e-0504-cba911e63688"
+        }
+      },
+      "states" : {
+        "default" : {
+          "name" : "System Config",
+          "root" : true,
+          "layouts" : {
+            "main" : {
+              "widgets" : {
+                "cb0b49cd-af4f-79a0-614c-2acaacb39cf8" : {
+                  "sizeX" : 6,
+                  "sizeY" : 8,
+                  "row" : 0,
+                  "col" : 0
+                },
+                "04405c26-08cd-571f-2d90-daa2687cf1d6" : {
+                  "sizeX" : 6,
+                  "sizeY" : 8,
+                  "row" : 0,
+                  "col" : 6
+                },
+                "5fc2aba1-1204-9636-8beb-ca29c0f04724" : {
+                  "sizeX" : 6,
+                  "sizeY" : 8,
+                  "row" : 0,
+                  "col" : 12
+                },
+                "ba41a629-4342-4cdb-6e28-268606d91885" : {
+                  "sizeX" : 6,
+                  "sizeY" : 8,
+                  "row" : 0,
+                  "col" : 18
+                },
+                "4c0bf780-1d97-304e-0504-cba911e63688" : {
+                  "sizeX" : 8,
+                  "sizeY" : 14,
+                  "row" : 8,
+                  "col" : 0
+                }
+              },
+              "gridSettings" : {
+                "layoutType" : "default",
+                "backgroundColor" : "#eeeeee",
+                "columns" : 24,
+                "margin" : 10,
+                "outerMargin" : true,
+                "backgroundSizeMode" : "100%"
+              }
+            }
+          }
+        }
+      },
+      "entityAliases" : { },
+      "filters" : { },
+      "timewindow" : {
+        "displayValue" : "",
+        "hideAggregation" : false,
+        "hideAggInterval" : false,
+        "hideTimezone" : false,
+        "selectedTab" : 0,
+        "realtime" : {
+          "realtimeType" : 0,
+          "interval" : 1000,
+          "timewindowMs" : 60000,
+          "quickInterval" : "CURRENT_DAY",
+          "hideInterval" : false,
+          "hideLastInterval" : false,
+          "hideQuickInterval" : false
+        },
+        "history" : {
+          "historyType" : 0,
+          "interval" : 1000,
+          "timewindowMs" : 60000,
+          "fixedTimewindow" : {
+            "startTimeMs" : 1737565444153,
+            "endTimeMs" : 1737651844153
+          },
+          "quickInterval" : "CURRENT_DAY",
+          "hideInterval" : false,
+          "hideLastInterval" : false,
+          "hideFixedInterval" : false,
+          "hideQuickInterval" : false
+        },
+        "aggregation" : {
+          "type" : "AVG",
+          "limit" : 25000
+        }
+      },
+      "settings" : {
+        "stateControllerId" : "entity",
+        "showTitle" : false,
+        "showDashboardsSelect" : true,
+        "showEntitiesSelect" : true,
+        "showDashboardTimewindow" : true,
+        "showDashboardExport" : true,
+        "toolbarAlwaysOpen" : true
+      }
     },
     "name" : "System Config",
     "resources" : null,
