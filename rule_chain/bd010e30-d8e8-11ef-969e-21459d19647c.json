@@ -341,10 +341,6 @@
       "type" : "Success"
     }, {
       "fromIndex" : 66,
-      "toIndex" : 67,
-      "type" : "update"
-    }, {
-      "fromIndex" : 66,
       "toIndex" : 69,
       "type" : "on"
     }, {
@@ -352,16 +348,12 @@
       "toIndex" : 70,
       "type" : "off"
     }, {
-      "fromIndex" : 67,
-      "toIndex" : 68,
-      "type" : "Success"
+      "fromIndex" : 66,
+      "toIndex" : 73,
+      "type" : "update"
     }, {
       "fromIndex" : 67,
-      "toIndex" : 85,
-      "type" : "Failure"
-    }, {
-      "fromIndex" : 67,
-      "toIndex" : 85,
+      "toIndex" : 74,
       "type" : "Success"
     }, {
       "fromIndex" : 69,
@@ -373,7 +365,7 @@
       "type" : "Success"
     }, {
       "fromIndex" : 72,
-      "toIndex" : 73,
+      "toIndex" : 67,
       "type" : "update"
     }, {
       "fromIndex" : 72,
@@ -385,7 +377,15 @@
       "type" : "off"
     }, {
       "fromIndex" : 73,
-      "toIndex" : 74,
+      "toIndex" : 68,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 73,
+      "toIndex" : 85,
+      "type" : "Failure"
+    }, {
+      "fromIndex" : 73,
+      "toIndex" : 85,
       "type" : "Success"
     }, {
       "fromIndex" : 75,
@@ -2482,8 +2482,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1631,
-        "layoutY" : 3178
+        "layoutX" : 1634,
+        "layoutY" : 3416
       },
       "configuration" : {
         "scriptLang" : "TBEL",
@@ -2648,8 +2648,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1634,
-        "layoutY" : 3416
+        "layoutX" : 1630,
+        "layoutY" : 3176
       },
       "configuration" : {
         "scriptLang" : "TBEL",
