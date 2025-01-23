@@ -110,23 +110,23 @@
       "type" : "Success"
     }, {
       "fromIndex" : 18,
-      "toIndex" : 30,
+      "toIndex" : 29,
       "type" : "Success"
     }, {
       "fromIndex" : 19,
-      "toIndex" : 34,
+      "toIndex" : 33,
       "type" : "Success"
     }, {
       "fromIndex" : 19,
-      "toIndex" : 37,
+      "toIndex" : 39,
       "type" : "Success"
     }, {
       "fromIndex" : 19,
-      "toIndex" : 40,
+      "toIndex" : 44,
       "type" : "Success"
     }, {
       "fromIndex" : 19,
-      "toIndex" : 43,
+      "toIndex" : 49,
       "type" : "Success"
     }, {
       "fromIndex" : 20,
@@ -150,64 +150,128 @@
       "type" : "on"
     }, {
       "fromIndex" : 26,
-      "toIndex" : 29,
+      "toIndex" : 28,
       "type" : "off"
     }, {
       "fromIndex" : 27,
-      "toIndex" : 28,
+      "toIndex" : 31,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 28,
+      "toIndex" : 31,
       "type" : "Success"
     }, {
       "fromIndex" : 29,
-      "toIndex" : 28,
-      "type" : "Success"
+      "toIndex" : 30,
+      "type" : "on"
+    }, {
+      "fromIndex" : 29,
+      "toIndex" : 32,
+      "type" : "off"
     }, {
       "fromIndex" : 30,
       "toIndex" : 31,
-      "type" : "on"
+      "type" : "Success"
     }, {
-      "fromIndex" : 30,
-      "toIndex" : 33,
-      "type" : "off"
-    }, {
-      "fromIndex" : 31,
-      "toIndex" : 32,
+      "fromIndex" : 32,
+      "toIndex" : 31,
       "type" : "Success"
     }, {
       "fromIndex" : 33,
-      "toIndex" : 32,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 34,
-      "toIndex" : 35,
+      "toIndex" : 34,
       "type" : "max"
     }, {
-      "fromIndex" : 34,
-      "toIndex" : 36,
+      "fromIndex" : 33,
+      "toIndex" : 35,
       "type" : "min"
+    }, {
+      "fromIndex" : 33,
+      "toIndex" : 36,
+      "type" : "max"
+    }, {
+      "fromIndex" : 33,
+      "toIndex" : 37,
+      "type" : "min"
+    }, {
+      "fromIndex" : 36,
+      "toIndex" : 38,
+      "type" : "Success"
     }, {
       "fromIndex" : 37,
       "toIndex" : 38,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 39,
+      "toIndex" : 40,
       "type" : "max"
     }, {
-      "fromIndex" : 37,
-      "toIndex" : 39,
-      "type" : "min"
-    }, {
-      "fromIndex" : 40,
+      "fromIndex" : 39,
       "toIndex" : 41,
-      "type" : "max"
+      "type" : "min"
     }, {
-      "fromIndex" : 40,
+      "fromIndex" : 39,
       "toIndex" : 42,
-      "type" : "min"
-    }, {
-      "fromIndex" : 43,
-      "toIndex" : 44,
       "type" : "max"
     }, {
-      "fromIndex" : 43,
-      "toIndex" : 45,
+      "fromIndex" : 39,
+      "toIndex" : 43,
       "type" : "min"
+    }, {
+      "fromIndex" : 42,
+      "toIndex" : 38,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 43,
+      "toIndex" : 38,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 44,
+      "toIndex" : 45,
+      "type" : "max"
+    }, {
+      "fromIndex" : 44,
+      "toIndex" : 46,
+      "type" : "min"
+    }, {
+      "fromIndex" : 44,
+      "toIndex" : 47,
+      "type" : "max"
+    }, {
+      "fromIndex" : 44,
+      "toIndex" : 48,
+      "type" : "min"
+    }, {
+      "fromIndex" : 47,
+      "toIndex" : 38,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 48,
+      "toIndex" : 38,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 49,
+      "toIndex" : 50,
+      "type" : "max"
+    }, {
+      "fromIndex" : 49,
+      "toIndex" : 51,
+      "type" : "min"
+    }, {
+      "fromIndex" : 49,
+      "toIndex" : 52,
+      "type" : "max"
+    }, {
+      "fromIndex" : 49,
+      "toIndex" : 53,
+      "type" : "min"
+    }, {
+      "fromIndex" : 52,
+      "toIndex" : 38,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 53,
+      "toIndex" : 38,
+      "type" : "Success"
     } ],
     "firstNodeIndex" : 6,
     "nodes" : [ {
@@ -400,9 +464,9 @@
         "tellFailureIfAbsent" : true,
         "fetchTo" : "METADATA",
         "clientAttributeNames" : [ ],
-        "latestTsKeyNames" : [ ],
-        "serverAttributeNames" : [ "bed_1_limits", "bed_2_limits", "bed_3_limits", "bed_4_limits", "ph_limits", "tds_limits", "temperature_limits" ],
         "sharedAttributeNames" : [ ],
+        "serverAttributeNames" : [ "temperature_limits" ],
+        "latestTsKeyNames" : [ ],
         "getLatestValueWithTs" : false
       },
       "configurationVersion" : 1,
@@ -413,7 +477,7 @@
         "entityType" : "RULE_NODE",
         "id" : "cfc92eb0-d8ea-11ef-969e-21459d19647c"
       },
-      "name" : "get server attributes",
+      "name" : "get temperature limits",
       "queueName" : null,
       "ruleChainId" : null,
       "singletonMode" : false,
@@ -726,9 +790,9 @@
         "tellFailureIfAbsent" : true,
         "fetchTo" : "METADATA",
         "clientAttributeNames" : [ ],
-        "latestTsKeyNames" : [ ],
-        "serverAttributeNames" : [ "bed_1_limits", "bed_2_limits", "bed_3_limits", "bed_4_limits", "ph_limits", "tds_limits", "temperature_limits" ],
         "sharedAttributeNames" : [ ],
+        "serverAttributeNames" : [ "bed_1_limits", "bed_2_limits", "bed_3_limits", "bed_4_limits" ],
+        "latestTsKeyNames" : [ ],
         "getLatestValueWithTs" : false
       },
       "configurationVersion" : 1,
@@ -743,7 +807,7 @@
         "entityType" : "RULE_NODE",
         "id" : "7ce98c80-d926-11ef-969e-21459d19647c"
       },
-      "name" : "get server attributes",
+      "name" : "get bed limits",
       "queueName" : null,
       "ruleChainId" : null,
       "singletonMode" : false,
@@ -751,16 +815,16 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1135,
-        "layoutY" : 1692
+        "layoutX" : 1132,
+        "layoutY" : 1847
       },
       "configuration" : {
         "tellFailureIfAbsent" : true,
         "fetchTo" : "METADATA",
         "clientAttributeNames" : [ ],
-        "latestTsKeyNames" : [ ],
-        "serverAttributeNames" : [ "bed_1_limits", "bed_2_limits", "bed_3_limits", "bed_4_limits", "ph_limits", "tds_limits", "temperature_limits" ],
         "sharedAttributeNames" : [ ],
+        "serverAttributeNames" : [ "bed_1_limits", "bed_2_limits", "bed_3_limits", "bed_4_limits" ],
+        "latestTsKeyNames" : [ ],
         "getLatestValueWithTs" : false
       },
       "configurationVersion" : 1,
@@ -775,7 +839,7 @@
         "entityType" : "RULE_NODE",
         "id" : "906de300-d926-11ef-969e-21459d19647c"
       },
-      "name" : "get server attributes",
+      "name" : "get bed limits",
       "queueName" : null,
       "ruleChainId" : null,
       "singletonMode" : false,
@@ -1039,31 +1103,6 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1924,
-        "layoutY" : 980
-      },
-      "configuration" : {
-        "scope" : "SHARED_SCOPE",
-        "notifyDevice" : false,
-        "sendAttributesUpdatedNotification" : false,
-        "updateAttributesOnlyOnValueChange" : false
-      },
-      "configurationVersion" : 2,
-      "createdTime" : 0,
-      "debugSettings" : null,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "1e94f910-d92d-11ef-969e-21459d19647c"
-      },
-      "name" : "pump 1 power",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgAttributesNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
         "layoutX" : 1630,
         "layoutY" : 1017
       },
@@ -1148,8 +1187,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1924,
-        "layoutY" : 1132
+        "layoutX" : 1925,
+        "layoutY" : 1058
       },
       "configuration" : {
         "scope" : "SHARED_SCOPE",
@@ -1169,7 +1208,7 @@
         "entityType" : "RULE_NODE",
         "id" : "1e963190-d92d-11ef-969e-21459d19647c"
       },
-      "name" : "pump 2 power",
+      "name" : "pump power",
       "queueName" : null,
       "ruleChainId" : null,
       "singletonMode" : false,
@@ -1205,8 +1244,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1375,
-        "layoutY" : 1286
+        "layoutX" : 1374,
+        "layoutY" : 1366
       },
       "configuration" : {
         "scriptLang" : "TBEL",
@@ -1271,7 +1310,7 @@
       "additionalInfo" : {
         "description" : "",
         "layoutX" : 1629,
-        "layoutY" : 1327
+        "layoutY" : 1407
       },
       "configuration" : {
         "scriptLang" : "TBEL",
@@ -1307,8 +1346,93 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1373,
-        "layoutY" : 1448
+        "layoutX" : 1630,
+        "layoutY" : 1328
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: {light1: true}, metadata: metadata, msgType: \"POST_ATTRIBUTES_REQUEST\"};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "53d28d60-d930-11ef-969e-21459d19647c"
+      },
+      "name" : "light 1 on",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1629,
+        "layoutY" : 1486
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: {light1: false}, metadata: metadata, msgType: \"POST_ATTRIBUTES_REQUEST\"};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "53d2db80-d930-11ef-969e-21459d19647c"
+      },
+      "name" : "light 1 off",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1926,
+        "layoutY" : 1844
+      },
+      "configuration" : {
+        "scope" : "SHARED_SCOPE",
+        "notifyDevice" : false,
+        "sendAttributesUpdatedNotification" : false,
+        "updateAttributesOnlyOnValueChange" : false
+      },
+      "configurationVersion" : 2,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "53d329a0-d930-11ef-969e-21459d19647c"
+      },
+      "name" : "light power",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1374,
+        "layoutY" : 1684
       },
       "configuration" : {
         "scriptLang" : "TBEL",
@@ -1325,7 +1449,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "1e985470-d92d-11ef-969e-21459d19647c"
+        "id" : "53d377c0-d930-11ef-969e-21459d19647c"
       },
       "name" : "l2 check",
       "queueName" : null,
@@ -1335,8 +1459,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1628,
-        "layoutY" : 1409
+        "layoutX" : 1630,
+        "layoutY" : 1565
       },
       "configuration" : {
         "scriptLang" : "TBEL",
@@ -1362,7 +1486,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "1e98a290-d92d-11ef-969e-21459d19647c"
+        "id" : "53d3ecf0-d930-11ef-969e-21459d19647c"
       },
       "name" : "l2 max alarm",
       "queueName" : null,
@@ -1372,8 +1496,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1627,
-        "layoutY" : 1489
+        "layoutX" : 1629,
+        "layoutY" : 1725
       },
       "configuration" : {
         "scriptLang" : "TBEL",
@@ -1399,7 +1523,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "1e9917c0-d92d-11ef-969e-21459d19647c"
+        "id" : "53d46220-d930-11ef-969e-21459d19647c"
       },
       "name" : "l2 min alarm",
       "queueName" : null,
@@ -1409,8 +1533,64 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1373,
-        "layoutY" : 1612
+        "layoutX" : 1630,
+        "layoutY" : 1646
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: {light2: true}, metadata: metadata, msgType: \"POST_ATTRIBUTES_REQUEST\"};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "53d4d750-d930-11ef-969e-21459d19647c"
+      },
+      "name" : "light 2 on",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1629,
+        "layoutY" : 1804
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: {light2: false}, metadata: metadata, msgType: \"POST_ATTRIBUTES_REQUEST\"};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "53d52570-d930-11ef-969e-21459d19647c"
+      },
+      "name" : "light 2 off",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1375,
+        "layoutY" : 2004
       },
       "configuration" : {
         "scriptLang" : "TBEL",
@@ -1427,7 +1607,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "1e9965e0-d92d-11ef-969e-21459d19647c"
+        "id" : "53d59aa0-d930-11ef-969e-21459d19647c"
       },
       "name" : "l3 check",
       "queueName" : null,
@@ -1437,8 +1617,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1628,
-        "layoutY" : 1573
+        "layoutX" : 1631,
+        "layoutY" : 1885
       },
       "configuration" : {
         "scriptLang" : "TBEL",
@@ -1464,7 +1644,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "1e99b400-d92d-11ef-969e-21459d19647c"
+        "id" : "53d60fd0-d930-11ef-969e-21459d19647c"
       },
       "name" : "l3 max alarm",
       "queueName" : null,
@@ -1474,8 +1654,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1627,
-        "layoutY" : 1653
+        "layoutX" : 1630,
+        "layoutY" : 2045
       },
       "configuration" : {
         "scriptLang" : "TBEL",
@@ -1501,7 +1681,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "1e9a2930-d92d-11ef-969e-21459d19647c"
+        "id" : "53d68500-d930-11ef-969e-21459d19647c"
       },
       "name" : "l3 min alarm",
       "queueName" : null,
@@ -1511,13 +1691,13 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1374,
-        "layoutY" : 1772
+        "layoutX" : 1631,
+        "layoutY" : 1966
       },
       "configuration" : {
         "scriptLang" : "TBEL",
-        "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "var v = msg.light1;\nvar lims = JSON.parse(metadata.ss_bed_4_limits).light;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max) {\n    return ['max']\n} else if (v <= min) {\n    return ['min']\n}"
+        "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: {light3: true}, metadata: metadata, msgType: \"POST_ATTRIBUTES_REQUEST\"};"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -1529,7 +1709,63 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "1e9a7750-d92d-11ef-969e-21459d19647c"
+        "id" : "53d6d320-d930-11ef-969e-21459d19647c"
+      },
+      "name" : "light 3 on",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1630,
+        "layoutY" : 2124
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: {light3: false}, metadata: metadata, msgType: \"POST_ATTRIBUTES_REQUEST\"};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "53d72140-d930-11ef-969e-21459d19647c"
+      },
+      "name" : "light 3 off",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1375,
+        "layoutY" : 2325
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
+        "tbelScript" : "var v = msg.light4;\nvar lims = JSON.parse(metadata.ss_bed_4_limits).light;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max) {\n    return ['max']\n} else if (v <= min) {\n    return ['min']\n}"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "53d76f60-d930-11ef-969e-21459d19647c"
       },
       "name" : "l4 check",
       "queueName" : null,
@@ -1539,8 +1775,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1629,
-        "layoutY" : 1733
+        "layoutX" : 1631,
+        "layoutY" : 2206
       },
       "configuration" : {
         "scriptLang" : "TBEL",
@@ -1566,7 +1802,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "1e9aec80-d92d-11ef-969e-21459d19647c"
+        "id" : "53d80ba0-d930-11ef-969e-21459d19647c"
       },
       "name" : "l4 max alarm",
       "queueName" : null,
@@ -1576,8 +1812,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1628,
-        "layoutY" : 1813
+        "layoutX" : 1630,
+        "layoutY" : 2366
       },
       "configuration" : {
         "scriptLang" : "TBEL",
@@ -1603,13 +1839,69 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "1e9b61b0-d92d-11ef-969e-21459d19647c"
+        "id" : "53d880d0-d930-11ef-969e-21459d19647c"
       },
       "name" : "l4 min alarm",
       "queueName" : null,
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1631,
+        "layoutY" : 2287
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: {light4: true}, metadata: metadata, msgType: \"POST_ATTRIBUTES_REQUEST\"};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "53d8cef0-d930-11ef-969e-21459d19647c"
+      },
+      "name" : "light 4 on",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1630,
+        "layoutY" : 2445
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: {light4: false}, metadata: metadata, msgType: \"POST_ATTRIBUTES_REQUEST\"};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "53d94420-d930-11ef-969e-21459d19647c"
+      },
+      "name" : "light 4 off",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
     } ],
     "ruleChainConnections" : null
   },
