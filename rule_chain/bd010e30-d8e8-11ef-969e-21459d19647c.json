@@ -2445,7 +2445,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "var state = msg.nutrients1;\nvar schedule = JSON.parse(metadata.ss_nutrients_schedule).nutrients1;\nvar repeat = schedule.repeat;\nvar duration = schedule.duration;\nvar last = schedule.last;\nvar next = schedule.next;\nvar off = schedule.off;\n\nvar now = Date.now();\n\nif (state) {\n    //Pump is on\n    if (now >= off) {\n        //Pump needs to be turned off\n        return ['off']\n    }\n} else {\n    //Pump is off\n    if (now >= next) {\n        //Pump needs to be turned on\n        //Last, next, and off need to be updated\n        ['on', 'update']\n    }\n}\n    "
+        "tbelScript" : "var state = msg.nutrients1;\nvar schedule = JSON.parse(metadata.ss_nutrients_schedule).nutrients1;\nvar repeat = schedule.repeat;\nvar duration = schedule.duration;\nvar last = schedule.last;\nvar next = schedule.next;\nvar off = schedule.off;\n\nvar now = Date.now();\n\nif (state) {\n    //Pump is on\n    if (now >= off) {\n        //Pump needs to be turned off\n        return ['off']\n    } else return []\n} else {\n    //Pump is off\n    if (now >= next) {\n        //Pump needs to be turned on\n        //Last, next, and off need to be updated\n        ['on', 'update']\n    } else return []\n}\n    "
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -2611,7 +2611,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "var state = msg.nutrients2;\nvar schedule = JSON.parse(metadata.ss_nutrients_schedule).nutrients2;\nvar repeat = schedule.repeat;\nvar duration = schedule.duration;\nvar last = schedule.last;\nvar next = schedule.next;\nvar off = schedule.off;\n\nvar now = Date.now();\n\nif (state) {\n    //Pump is on\n    if (now >= off) {\n        //Pump needs to be turned off\n        return ['off']\n    }\n} else {\n    //Pump is off\n    if (now >= next) {\n        //Pump needs to be turned on\n        //Last, next, and off need to be updated\n        ['on', 'update']\n    }\n}\n    "
+        "tbelScript" : "var state = msg.nutrients2;\nvar schedule = JSON.parse(metadata.ss_nutrients_schedule).nutrients2;\nvar repeat = schedule.repeat;\nvar duration = schedule.duration;\nvar last = schedule.last;\nvar next = schedule.next;\nvar off = schedule.off;\n\nvar now = Date.now();\n\nif (state) {\n    //Pump is on\n    if (now >= off) {\n        //Pump needs to be turned off\n        return ['off']\n    } else return []\n} else {\n    //Pump is off\n    if (now >= next) {\n        //Pump needs to be turned on\n        //Last, next, and off need to be updated\n        ['on', 'update']\n    } else return []\n}\n    "
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -2781,7 +2781,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "var state = msg.nutrients3;\nvar schedule = JSON.parse(metadata.ss_nutrients_schedule).nutrients3;\nvar repeat = schedule.repeat;\nvar duration = schedule.duration;\nvar last = schedule.last;\nvar next = schedule.next;\nvar off = schedule.off;\n\nvar now = Date.now();\n\nif (state) {\n    //Pump is on\n    if (now >= off) {\n        //Pump needs to be turned off\n        return ['off']\n    }\n} else {\n    //Pump is off\n    if (now >= next) {\n        //Pump needs to be turned on\n        //Last, next, and off need to be updated\n        ['on', 'update']\n    }\n}\n    "
+        "tbelScript" : "var state = msg.nutrients3;\nvar schedule = JSON.parse(metadata.ss_nutrients_schedule).nutrients3;\nvar repeat = schedule.repeat;\nvar duration = schedule.duration;\nvar last = schedule.last;\nvar next = schedule.next;\nvar off = schedule.off;\n\nvar now = Date.now();\n\nif (state) {\n    //Pump is on\n    if (now >= off) {\n        //Pump needs to be turned off\n        return ['off']\n    } else return []\n} else {\n    //Pump is off\n    if (now >= next) {\n        //Pump needs to be turned on\n        //Last, next, and off need to be updated\n        ['on', 'update']\n    } else return []\n}\n    "
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
