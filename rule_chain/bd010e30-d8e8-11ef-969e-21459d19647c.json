@@ -26,11 +26,11 @@
       "type" : "Success"
     }, {
       "fromIndex" : 0,
-      "toIndex" : 32,
+      "toIndex" : 18,
       "type" : "Success"
     }, {
       "fromIndex" : 0,
-      "toIndex" : 33,
+      "toIndex" : 19,
       "type" : "Success"
     }, {
       "fromIndex" : 2,
@@ -79,79 +79,63 @@
     }, {
       "fromIndex" : 12,
       "toIndex" : 14,
-      "type" : "max"
+      "type" : "min"
     }, {
-      "fromIndex" : 12,
+      "fromIndex" : 15,
       "toIndex" : 16,
+      "type" : "max"
+    }, {
+      "fromIndex" : 15,
+      "toIndex" : 17,
       "type" : "min"
     }, {
-      "fromIndex" : 14,
-      "toIndex" : 15,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 17,
-      "toIndex" : 18,
-      "type" : "max"
-    }, {
-      "fromIndex" : 17,
-      "toIndex" : 19,
-      "type" : "max"
-    }, {
-      "fromIndex" : 17,
-      "toIndex" : 21,
-      "type" : "min"
-    }, {
-      "fromIndex" : 19,
-      "toIndex" : 20,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 22,
-      "toIndex" : 23,
-      "type" : "max"
-    }, {
-      "fromIndex" : 22,
-      "toIndex" : 24,
-      "type" : "max"
-    }, {
-      "fromIndex" : 22,
-      "toIndex" : 26,
-      "type" : "min"
-    }, {
-      "fromIndex" : 24,
-      "toIndex" : 25,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 27,
-      "toIndex" : 28,
-      "type" : "max"
-    }, {
-      "fromIndex" : 27,
-      "toIndex" : 29,
-      "type" : "max"
-    }, {
-      "fromIndex" : 27,
-      "toIndex" : 31,
-      "type" : "min"
-    }, {
-      "fromIndex" : 29,
-      "toIndex" : 30,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 32,
+      "fromIndex" : 18,
       "toIndex" : 12,
       "type" : "Success"
     }, {
-      "fromIndex" : 32,
-      "toIndex" : 17,
+      "fromIndex" : 18,
+      "toIndex" : 15,
       "type" : "Success"
     }, {
-      "fromIndex" : 32,
+      "fromIndex" : 18,
+      "toIndex" : 25,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 18,
+      "toIndex" : 28,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 20,
+      "toIndex" : 21,
+      "type" : "max"
+    }, {
+      "fromIndex" : 20,
       "toIndex" : 22,
+      "type" : "max"
+    }, {
+      "fromIndex" : 20,
+      "toIndex" : 24,
+      "type" : "min"
+    }, {
+      "fromIndex" : 22,
+      "toIndex" : 23,
       "type" : "Success"
     }, {
-      "fromIndex" : 32,
+      "fromIndex" : 25,
+      "toIndex" : 26,
+      "type" : "max"
+    }, {
+      "fromIndex" : 25,
       "toIndex" : 27,
-      "type" : "Success"
+      "type" : "min"
+    }, {
+      "fromIndex" : 28,
+      "toIndex" : 29,
+      "type" : "max"
+    }, {
+      "fromIndex" : 28,
+      "toIndex" : 30,
+      "type" : "min"
     } ],
     "firstNodeIndex" : 6,
     "nodes" : [ {
@@ -463,8 +447,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1373,
-        "layoutY" : 380
+        "layoutX" : 1376,
+        "layoutY" : 336
       },
       "configuration" : {
         "scriptLang" : "TBEL",
@@ -524,57 +508,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1631,
-        "layoutY" : 381
-      },
-      "configuration" : {
-        "scriptLang" : "TBEL",
-        "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "return {msg: {pump1: true}, metadata: metadata, msgType: \"POST_ATTRIBUTES_REQUEST\"};"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugSettings" : null,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "f39c47a0-d8f4-11ef-969e-21459d19647c"
-      },
-      "name" : "pump 1 off",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1893,
-        "layoutY" : 381
-      },
-      "configuration" : {
-        "scope" : "SHARED_SCOPE",
-        "notifyDevice" : false,
-        "sendAttributesUpdatedNotification" : false,
-        "updateAttributesOnlyOnValueChange" : false
-      },
-      "configurationVersion" : 2,
-      "createdTime" : 0,
-      "debugSettings" : null,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "f39cbcd0-d8f4-11ef-969e-21459d19647c"
-      },
-      "name" : "pump 1 off",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgAttributesNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1631,
-        "layoutY" : 465
+        "layoutX" : 1630,
+        "layoutY" : 377
       },
       "configuration" : {
         "scriptLang" : "TBEL",
@@ -610,8 +545,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1375,
-        "layoutY" : 630
+        "layoutX" : 1376,
+        "layoutY" : 500
       },
       "configuration" : {
         "scriptLang" : "TBEL",
@@ -638,8 +573,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1633,
-        "layoutY" : 547
+        "layoutX" : 1630,
+        "layoutY" : 459
       },
       "configuration" : {
         "scriptLang" : "TBEL",
@@ -675,65 +610,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1633,
-        "layoutY" : 631
-      },
-      "configuration" : {
-        "scriptLang" : "TBEL",
-        "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "return {msg: {pump2: true}, metadata: metadata, msgType: \"POST_ATTRIBUTES_REQUEST\"};"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugSettings" : {
-        "allEnabled" : false,
-        "allEnabledUntil" : 0,
-        "failuresEnabled" : false
-      },
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "69f34c90-d923-11ef-969e-21459d19647c"
-      },
-      "name" : "pump 2 off",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1895,
-        "layoutY" : 631
-      },
-      "configuration" : {
-        "scope" : "SHARED_SCOPE",
-        "notifyDevice" : false,
-        "sendAttributesUpdatedNotification" : false,
-        "updateAttributesOnlyOnValueChange" : false
-      },
-      "configurationVersion" : 2,
-      "createdTime" : 0,
-      "debugSettings" : {
-        "allEnabled" : false,
-        "allEnabledUntil" : 0,
-        "failuresEnabled" : false
-      },
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "69f39ab0-d923-11ef-969e-21459d19647c"
-      },
-      "name" : "pump 2 off",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgAttributesNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1633,
-        "layoutY" : 715
+        "layoutX" : 1630,
+        "layoutY" : 540
       },
       "configuration" : {
         "scriptLang" : "TBEL",
@@ -762,324 +640,6 @@
         "id" : "69f40fe0-d923-11ef-969e-21459d19647c"
       },
       "name" : "wd2 min alarm",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1376,
-        "layoutY" : 879
-      },
-      "configuration" : {
-        "scriptLang" : "TBEL",
-        "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "var v = msg.water_depth_3;\nvar lims = JSON.parse(metadata.ss_bed_3_limits).water_depth;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max) {\n    return ['max']\n} else if (v <= min) {\n    return ['min']\n}"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugSettings" : {
-        "allEnabled" : false,
-        "allEnabledUntil" : 0,
-        "failuresEnabled" : false
-      },
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "69f45e00-d923-11ef-969e-21459d19647c"
-      },
-      "name" : "wd3 check",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.filter.TbJsSwitchNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1634,
-        "layoutY" : 796
-      },
-      "configuration" : {
-        "scriptLang" : "TBEL",
-        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
-        "alarmDetailsBuildTbel" : "var details = {};\nif (metadata.prevAlarmDetails != null) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    metadata.remove('prevAlarmDetails');\n    //now metadata is the same as it comes IN this rule node\n}\n\nreturn details;",
-        "useMessageAlarmData" : false,
-        "overwriteAlarmDetails" : false,
-        "alarmType" : "Water Depth 3 Max Alarm",
-        "severity" : "CRITICAL",
-        "propagate" : false,
-        "relationTypes" : [ ],
-        "propagateToOwner" : false,
-        "propagateToTenant" : false,
-        "dynamicSeverity" : false
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugSettings" : {
-        "allEnabled" : false,
-        "allEnabledUntil" : 0,
-        "failuresEnabled" : false
-      },
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "69f4d330-d923-11ef-969e-21459d19647c"
-      },
-      "name" : "wd3 max alarm",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1634,
-        "layoutY" : 880
-      },
-      "configuration" : {
-        "scriptLang" : "TBEL",
-        "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "return {msg: {pump3: true}, metadata: metadata, msgType: \"POST_ATTRIBUTES_REQUEST\"};"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugSettings" : {
-        "allEnabled" : false,
-        "allEnabledUntil" : 0,
-        "failuresEnabled" : false
-      },
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "69f52150-d923-11ef-969e-21459d19647c"
-      },
-      "name" : "pump 3 off",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1896,
-        "layoutY" : 880
-      },
-      "configuration" : {
-        "scope" : "SHARED_SCOPE",
-        "notifyDevice" : false,
-        "sendAttributesUpdatedNotification" : false,
-        "updateAttributesOnlyOnValueChange" : false
-      },
-      "configurationVersion" : 2,
-      "createdTime" : 0,
-      "debugSettings" : {
-        "allEnabled" : false,
-        "allEnabledUntil" : 0,
-        "failuresEnabled" : false
-      },
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "69f56f70-d923-11ef-969e-21459d19647c"
-      },
-      "name" : "pump 3 off",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgAttributesNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1634,
-        "layoutY" : 964
-      },
-      "configuration" : {
-        "scriptLang" : "TBEL",
-        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
-        "alarmDetailsBuildTbel" : "var details = {};\nif (metadata.prevAlarmDetails != null) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    metadata.remove('prevAlarmDetails');\n    //now metadata is the same as it comes IN this rule node\n}\n\nreturn details;",
-        "useMessageAlarmData" : false,
-        "overwriteAlarmDetails" : false,
-        "alarmType" : "Water Depth 3 Min Alarm",
-        "severity" : "MAJOR",
-        "propagate" : false,
-        "relationTypes" : [ ],
-        "propagateToOwner" : false,
-        "propagateToTenant" : false,
-        "dynamicSeverity" : false
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugSettings" : {
-        "allEnabled" : false,
-        "allEnabledUntil" : 0,
-        "failuresEnabled" : false
-      },
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "69f5e4a0-d923-11ef-969e-21459d19647c"
-      },
-      "name" : "wd3 min alarm",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1376,
-        "layoutY" : 1129
-      },
-      "configuration" : {
-        "scriptLang" : "TBEL",
-        "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "var v = msg.water_depth_4;\nvar lims = JSON.parse(metadata.ss_bed_4_limits).water_depth;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max) {\n    return ['max']\n} else if (v <= min) {\n    return ['min']\n}"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugSettings" : {
-        "allEnabled" : false,
-        "allEnabledUntil" : 0,
-        "failuresEnabled" : false
-      },
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "69f632c0-d923-11ef-969e-21459d19647c"
-      },
-      "name" : "wd4 check",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.filter.TbJsSwitchNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1634,
-        "layoutY" : 1046
-      },
-      "configuration" : {
-        "scriptLang" : "TBEL",
-        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
-        "alarmDetailsBuildTbel" : "var details = {};\nif (metadata.prevAlarmDetails != null) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    metadata.remove('prevAlarmDetails');\n    //now metadata is the same as it comes IN this rule node\n}\n\nreturn details;",
-        "useMessageAlarmData" : false,
-        "overwriteAlarmDetails" : false,
-        "alarmType" : "Water Depth 4 Max Alarm",
-        "severity" : "CRITICAL",
-        "propagate" : false,
-        "relationTypes" : [ ],
-        "propagateToOwner" : false,
-        "propagateToTenant" : false,
-        "dynamicSeverity" : false
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugSettings" : {
-        "allEnabled" : false,
-        "allEnabledUntil" : 0,
-        "failuresEnabled" : false
-      },
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "69f6a7f0-d923-11ef-969e-21459d19647c"
-      },
-      "name" : "wd4 max alarm",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1634,
-        "layoutY" : 1130
-      },
-      "configuration" : {
-        "scriptLang" : "TBEL",
-        "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "return {msg: {pump4: true}, metadata: metadata, msgType: \"POST_ATTRIBUTES_REQUEST\"};"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugSettings" : {
-        "allEnabled" : false,
-        "allEnabledUntil" : 0,
-        "failuresEnabled" : false
-      },
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "69f6f610-d923-11ef-969e-21459d19647c"
-      },
-      "name" : "pump 4 off",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1896,
-        "layoutY" : 1130
-      },
-      "configuration" : {
-        "scope" : "SHARED_SCOPE",
-        "notifyDevice" : false,
-        "sendAttributesUpdatedNotification" : false,
-        "updateAttributesOnlyOnValueChange" : false
-      },
-      "configurationVersion" : 2,
-      "createdTime" : 0,
-      "debugSettings" : {
-        "allEnabled" : false,
-        "allEnabledUntil" : 0,
-        "failuresEnabled" : false
-      },
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "69f76b40-d923-11ef-969e-21459d19647c"
-      },
-      "name" : "pump 4 off",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgAttributesNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1634,
-        "layoutY" : 1214
-      },
-      "configuration" : {
-        "scriptLang" : "TBEL",
-        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
-        "alarmDetailsBuildTbel" : "var details = {};\nif (metadata.prevAlarmDetails != null) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    metadata.remove('prevAlarmDetails');\n    //now metadata is the same as it comes IN this rule node\n}\n\nreturn details;",
-        "useMessageAlarmData" : false,
-        "overwriteAlarmDetails" : false,
-        "alarmType" : "Water Depth 4 Min Alarm",
-        "severity" : "MAJOR",
-        "propagate" : false,
-        "relationTypes" : [ ],
-        "propagateToOwner" : false,
-        "propagateToTenant" : false,
-        "dynamicSeverity" : false
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugSettings" : {
-        "allEnabled" : false,
-        "allEnabledUntil" : 0,
-        "failuresEnabled" : false
-      },
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "69f7e070-d923-11ef-969e-21459d19647c"
-      },
-      "name" : "wd4 min alarm",
       "queueName" : null,
       "ruleChainId" : null,
       "singletonMode" : false,
@@ -1119,8 +679,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1113,
-        "layoutY" : 1618
+        "layoutX" : 1135,
+        "layoutY" : 1619
       },
       "configuration" : {
         "tellFailureIfAbsent" : true,
@@ -1148,6 +708,369 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.metadata.TbGetAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1377,
+        "layoutY" : 1734
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
+        "tbelScript" : "var v = msg.light1;\nvar lims = JSON.parse(metadata.ss_bed_1_limits).light;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max) {\n    return ['max']\n} else if (v <= min) {\n    return ['min']\n}"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "eb7ad670-d928-11ef-969e-21459d19647c"
+      },
+      "name" : "l1 check",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsSwitchNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1635,
+        "layoutY" : 1651
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "alarmDetailsBuildTbel" : "var details = {};\nif (metadata.prevAlarmDetails != null) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    metadata.remove('prevAlarmDetails');\n    //now metadata is the same as it comes IN this rule node\n}\n\nreturn details;",
+        "useMessageAlarmData" : false,
+        "overwriteAlarmDetails" : false,
+        "alarmType" : "Light 1 Max Alarm",
+        "severity" : "MAJOR",
+        "propagate" : false,
+        "relationTypes" : [ ],
+        "propagateToOwner" : false,
+        "propagateToTenant" : false,
+        "dynamicSeverity" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "eb7b72b0-d928-11ef-969e-21459d19647c"
+      },
+      "name" : "l1 max alarm",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1635,
+        "layoutY" : 1735
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: {pump1: true}, metadata: metadata, msgType: \"POST_ATTRIBUTES_REQUEST\"};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "eb7be7e0-d928-11ef-969e-21459d19647c"
+      },
+      "name" : "pump 1 off",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1897,
+        "layoutY" : 1735
+      },
+      "configuration" : {
+        "scope" : "SHARED_SCOPE",
+        "notifyDevice" : false,
+        "sendAttributesUpdatedNotification" : false,
+        "updateAttributesOnlyOnValueChange" : false
+      },
+      "configurationVersion" : 2,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "eb7c3600-d928-11ef-969e-21459d19647c"
+      },
+      "name" : "pump 1 off",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1635,
+        "layoutY" : 1819
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "alarmDetailsBuildTbel" : "var details = {};\nif (metadata.prevAlarmDetails != null) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    metadata.remove('prevAlarmDetails');\n    //now metadata is the same as it comes IN this rule node\n}\n\nreturn details;",
+        "useMessageAlarmData" : false,
+        "overwriteAlarmDetails" : false,
+        "alarmType" : "Light 1 Min Alarm",
+        "severity" : "MAJOR",
+        "propagate" : false,
+        "relationTypes" : [ ],
+        "propagateToOwner" : false,
+        "propagateToTenant" : false,
+        "dynamicSeverity" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "eb7cab30-d928-11ef-969e-21459d19647c"
+      },
+      "name" : "l1 min alarm",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1377,
+        "layoutY" : 663
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
+        "tbelScript" : "var v = msg.water_depth_3;\nvar lims = JSON.parse(metadata.ss_bed_3_limits).water_depth;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max) {\n    return ['max']\n} else if (v <= min) {\n    return ['min']\n}"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "eb7d2060-d928-11ef-969e-21459d19647c"
+      },
+      "name" : "wd3 check",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsSwitchNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1632,
+        "layoutY" : 624
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "alarmDetailsBuildTbel" : "var details = {};\nif (metadata.prevAlarmDetails != null) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    metadata.remove('prevAlarmDetails');\n    //now metadata is the same as it comes IN this rule node\n}\n\nreturn details;",
+        "useMessageAlarmData" : false,
+        "overwriteAlarmDetails" : false,
+        "alarmType" : "Water Depth 3 Max Alarm",
+        "severity" : "CRITICAL",
+        "propagate" : false,
+        "relationTypes" : [ ],
+        "propagateToOwner" : false,
+        "propagateToTenant" : false,
+        "dynamicSeverity" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "eb7d9590-d928-11ef-969e-21459d19647c"
+      },
+      "name" : "wd3 max alarm",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1631,
+        "layoutY" : 704
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "alarmDetailsBuildTbel" : "var details = {};\nif (metadata.prevAlarmDetails != null) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    metadata.remove('prevAlarmDetails');\n    //now metadata is the same as it comes IN this rule node\n}\n\nreturn details;",
+        "useMessageAlarmData" : false,
+        "overwriteAlarmDetails" : false,
+        "alarmType" : "Water Depth 3 Min Alarm",
+        "severity" : "MAJOR",
+        "propagate" : false,
+        "relationTypes" : [ ],
+        "propagateToOwner" : false,
+        "propagateToTenant" : false,
+        "dynamicSeverity" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "eb7e31d0-d928-11ef-969e-21459d19647c"
+      },
+      "name" : "wd3 min alarm",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1377,
+        "layoutY" : 827
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
+        "tbelScript" : "var v = msg.water_depth_4;\nvar lims = JSON.parse(metadata.ss_bed_4_limits).water_depth;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max) {\n    return ['max']\n} else if (v <= min) {\n    return ['min']\n}"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "eb7ea700-d928-11ef-969e-21459d19647c"
+      },
+      "name" : "wd4 check",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsSwitchNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1631,
+        "layoutY" : 786
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "alarmDetailsBuildTbel" : "var details = {};\nif (metadata.prevAlarmDetails != null) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    metadata.remove('prevAlarmDetails');\n    //now metadata is the same as it comes IN this rule node\n}\n\nreturn details;",
+        "useMessageAlarmData" : false,
+        "overwriteAlarmDetails" : false,
+        "alarmType" : "Water Depth 4 Max Alarm",
+        "severity" : "CRITICAL",
+        "propagate" : false,
+        "relationTypes" : [ ],
+        "propagateToOwner" : false,
+        "propagateToTenant" : false,
+        "dynamicSeverity" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "eb7f4340-d928-11ef-969e-21459d19647c"
+      },
+      "name" : "wd4 max alarm",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1631,
+        "layoutY" : 867
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "alarmDetailsBuildTbel" : "var details = {};\nif (metadata.prevAlarmDetails != null) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    metadata.remove('prevAlarmDetails');\n    //now metadata is the same as it comes IN this rule node\n}\n\nreturn details;",
+        "useMessageAlarmData" : false,
+        "overwriteAlarmDetails" : false,
+        "alarmType" : "Water Depth 4 Min Alarm",
+        "severity" : "MAJOR",
+        "propagate" : false,
+        "relationTypes" : [ ],
+        "propagateToOwner" : false,
+        "propagateToTenant" : false,
+        "dynamicSeverity" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "eb7fdf80-d928-11ef-969e-21459d19647c"
+      },
+      "name" : "wd4 min alarm",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
     } ],
     "ruleChainConnections" : null
   },
