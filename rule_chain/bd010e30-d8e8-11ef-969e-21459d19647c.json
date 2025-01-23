@@ -33,6 +33,14 @@
       "toIndex" : 19,
       "type" : "Success"
     }, {
+      "fromIndex" : 0,
+      "toIndex" : 54,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 0,
+      "toIndex" : 55,
+      "type" : "Success"
+    }, {
       "fromIndex" : 2,
       "toIndex" : 0,
       "type" : "Post telemetry"
@@ -187,11 +195,11 @@
     }, {
       "fromIndex" : 33,
       "toIndex" : 36,
-      "type" : "max"
+      "type" : "max-control"
     }, {
       "fromIndex" : 33,
       "toIndex" : 37,
-      "type" : "min"
+      "type" : "min-control"
     }, {
       "fromIndex" : 36,
       "toIndex" : 38,
@@ -211,11 +219,11 @@
     }, {
       "fromIndex" : 39,
       "toIndex" : 42,
-      "type" : "max"
+      "type" : "max-control"
     }, {
       "fromIndex" : 39,
       "toIndex" : 43,
-      "type" : "min"
+      "type" : "min-control"
     }, {
       "fromIndex" : 42,
       "toIndex" : 38,
@@ -235,11 +243,11 @@
     }, {
       "fromIndex" : 44,
       "toIndex" : 47,
-      "type" : "max"
+      "type" : "max-control"
     }, {
       "fromIndex" : 44,
       "toIndex" : 48,
-      "type" : "min"
+      "type" : "min-control"
     }, {
       "fromIndex" : 47,
       "toIndex" : 38,
@@ -259,11 +267,11 @@
     }, {
       "fromIndex" : 49,
       "toIndex" : 52,
-      "type" : "max"
+      "type" : "max-control"
     }, {
       "fromIndex" : 49,
       "toIndex" : 53,
-      "type" : "min"
+      "type" : "min-control"
     }, {
       "fromIndex" : 52,
       "toIndex" : 38,
@@ -272,6 +280,42 @@
       "fromIndex" : 53,
       "toIndex" : 38,
       "type" : "Success"
+    }, {
+      "fromIndex" : 54,
+      "toIndex" : 56,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 54,
+      "toIndex" : 59,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 55,
+      "toIndex" : 62,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 56,
+      "toIndex" : 57,
+      "type" : "max"
+    }, {
+      "fromIndex" : 56,
+      "toIndex" : 58,
+      "type" : "min"
+    }, {
+      "fromIndex" : 59,
+      "toIndex" : 60,
+      "type" : "max"
+    }, {
+      "fromIndex" : 59,
+      "toIndex" : 61,
+      "type" : "min"
+    }, {
+      "fromIndex" : 62,
+      "toIndex" : 63,
+      "type" : "max"
+    }, {
+      "fromIndex" : 62,
+      "toIndex" : 64,
+      "type" : "min"
     } ],
     "firstNodeIndex" : 6,
     "nodes" : [ {
@@ -791,7 +835,7 @@
         "fetchTo" : "METADATA",
         "clientAttributeNames" : [ ],
         "sharedAttributeNames" : [ ],
-        "serverAttributeNames" : [ "bed_1_limits", "bed_2_limits", "bed_3_limits", "bed_4_limits" ],
+        "serverAttributeNames" : [ "bed_1_limits", "bed_2_limits", "bed_3_limits", "bed_4_limits", "manual_control" ],
         "latestTsKeyNames" : [ ],
         "getLatestValueWithTs" : false
       },
@@ -823,7 +867,7 @@
         "fetchTo" : "METADATA",
         "clientAttributeNames" : [ ],
         "sharedAttributeNames" : [ ],
-        "serverAttributeNames" : [ "bed_1_limits", "bed_2_limits", "bed_3_limits", "bed_4_limits" ],
+        "serverAttributeNames" : [ "bed_1_limits", "bed_2_limits", "bed_3_limits", "bed_4_limits", "manual_control" ],
         "latestTsKeyNames" : [ ],
         "getLatestValueWithTs" : false
       },
@@ -1057,7 +1101,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "var v1 = msg.water_depth_1;\nvar v2 = msg.water_depth_2;\nvar lims1 = JSON.parse(metadata.ss_bed_1_limits).water_depth;\nvar lims2 = JSON.parse(metadata.ss_bed_2_limits).water_depth;\nvar max1 = lims1.max;\nvar min1 = lims1.min;\nvar max2 = lims2.max;\nvar min2 = lims2.min;\n\nif(v1 >= max1 || v2 >= max2) {\n    return [\"off\"]\n}else if((v1 <= min1 && v2 < max2) || (v1 < max1 && v2 <= min2)) {\n    return [\"on\"]\n}"
+        "tbelScript" : "var manual = metadata.ss_manual_control;\nif (manual) return;\n\nvar v1 = msg.water_depth_1;\nvar v2 = msg.water_depth_2;\nvar lims1 = JSON.parse(metadata.ss_bed_1_limits).water_depth;\nvar lims2 = JSON.parse(metadata.ss_bed_2_limits).water_depth;\nvar max1 = lims1.max;\nvar min1 = lims1.min;\nvar max2 = lims2.max;\nvar min2 = lims2.min;\n\nif(v1 >= max1 || v2 >= max2) {\n    return [\"off\"]\n}else if((v1 <= min1 && v2 < max2) || (v1 < max1 && v2 <= min2)) {\n    return [\"on\"]\n}"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -1137,7 +1181,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "var v1 = msg.water_depth_3;\nvar v2 = msg.water_depth_4;\nvar lims1 = JSON.parse(metadata.ss_bed_3_limits).water_depth;\nvar lims2 = JSON.parse(metadata.ss_bed_4_limits).water_depth;\nvar max1 = lims1.max;\nvar min1 = lims1.min;\nvar max2 = lims2.max;\nvar min2 = lims2.min;\n\nif(v1 >= max1 || v2 >= max2) {\n    return [\"off\"]\n}else if((v1 <= min1 && v2 < max2) || (v1 < max1 && v2 <= min2)) {\n    return [\"on\"]\n}"
+        "tbelScript" : "var manual = metadata.ss_manual_control;\nif (manual) return;\n\nvar v1 = msg.water_depth_3;\nvar v2 = msg.water_depth_4;\nvar lims1 = JSON.parse(metadata.ss_bed_3_limits).water_depth;\nvar lims2 = JSON.parse(metadata.ss_bed_4_limits).water_depth;\nvar max1 = lims1.max;\nvar min1 = lims1.min;\nvar max2 = lims2.max;\nvar min2 = lims2.min;\n\nif(v1 >= max1 || v2 >= max2) {\n    return [\"off\"]\n}else if((v1 <= min1 && v2 < max2) || (v1 < max1 && v2 <= min2)) {\n    return [\"on\"]\n}"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -1250,7 +1294,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "var v = msg.light1;\nvar lims = JSON.parse(metadata.ss_bed_1_limits).light;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max) {\n    return ['max']\n} else if (v <= min) {\n    return ['min']\n}"
+        "tbelScript" : "var manual = metadata.ss_manual_control;\n\nvar v = msg.light1;\nvar lims = JSON.parse(metadata.ss_bed_1_limits).light;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max && !manual) {\n    return ['max', 'max-control'];\n} else if (v >= max && manual) {\n    return ['max'];\n} else if (v <= min && !manual) {\n    return ['min', 'min-control'];\n} else if (v <= min && manual) {\n    return ['min'];\n}"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -1437,7 +1481,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "var v = msg.light2;\nvar lims = JSON.parse(metadata.ss_bed_2_limits).light;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max) {\n    return ['max']\n} else if (v <= min) {\n    return ['min']\n}"
+        "tbelScript" : "var manual = metadata.ss_manual_control;\n\nvar v = msg.light2;\nvar lims = JSON.parse(metadata.ss_bed_2_limits).light;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max && !manual) {\n    return ['max', 'max-control'];\n} else if (v >= max && manual) {\n    return ['max'];\n} else if (v <= min && !manual) {\n    return ['min', 'min-control'];\n} else if (v <= min && manual) {\n    return ['min'];\n}"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -1595,7 +1639,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "var v = msg.light3;\nvar lims = JSON.parse(metadata.ss_bed_3_limits).light;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max) {\n    return ['max']\n} else if (v <= min) {\n    return ['min']\n}"
+        "tbelScript" : "var manual = metadata.ss_manual_control;\n\nvar v = msg.light3;\nvar lims = JSON.parse(metadata.ss_bed_3_limits).light;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max && !manual) {\n    return ['max', 'max-control'];\n} else if (v >= max && manual) {\n    return ['max'];\n} else if (v <= min && !manual) {\n    return ['min', 'min-control'];\n} else if (v <= min && manual) {\n    return ['min'];\n}"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -1753,7 +1797,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "var v = msg.light4;\nvar lims = JSON.parse(metadata.ss_bed_4_limits).light;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max) {\n    return ['max']\n} else if (v <= min) {\n    return ['min']\n}"
+        "tbelScript" : "var manual = metadata.ss_manual_control;\n\nvar v = msg.light4;\nvar lims = JSON.parse(metadata.ss_bed_4_limits).light;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max && !manual) {\n    return ['max', 'max-control'];\n} else if (v >= max && manual) {\n    return ['max'];\n} else if (v <= min && !manual) {\n    return ['min', 'min-control'];\n} else if (v <= min && manual) {\n    return ['min'];\n}"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -1902,6 +1946,376 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1130,
+        "layoutY" : 2648
+      },
+      "configuration" : {
+        "tellFailureIfAbsent" : true,
+        "fetchTo" : "METADATA",
+        "clientAttributeNames" : [ ],
+        "sharedAttributeNames" : [ ],
+        "serverAttributeNames" : [ "ph_limits" ],
+        "latestTsKeyNames" : [ ],
+        "getLatestValueWithTs" : false
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "fdb57fd0-d931-11ef-969e-21459d19647c"
+      },
+      "name" : "get ph limits",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1130,
+        "layoutY" : 2893
+      },
+      "configuration" : {
+        "tellFailureIfAbsent" : true,
+        "fetchTo" : "METADATA",
+        "clientAttributeNames" : [ ],
+        "sharedAttributeNames" : [ ],
+        "serverAttributeNames" : [ "tds" ],
+        "latestTsKeyNames" : [ ],
+        "getLatestValueWithTs" : false
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "fdb5cdf0-d931-11ef-969e-21459d19647c"
+      },
+      "name" : "get tds limits",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1377,
+        "layoutY" : 2568
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
+        "tbelScript" : "var v = msg.ph1;\nvar lims = JSON.parse(metadata.ss_ph_limits).ph1;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max) {\n    return ['max']\n} else if (v <= min) {\n    return ['min']\n}"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "fdb64320-d931-11ef-969e-21459d19647c"
+      },
+      "name" : "ph1 check",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsSwitchNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1632,
+        "layoutY" : 2529
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "alarmDetailsBuildTbel" : "var details = {};\nif (metadata.prevAlarmDetails != null) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    metadata.remove('prevAlarmDetails');\n    //now metadata is the same as it comes IN this rule node\n}\n\nreturn details;",
+        "useMessageAlarmData" : false,
+        "overwriteAlarmDetails" : false,
+        "alarmType" : "pH 1 Max Alarm",
+        "severity" : "MAJOR",
+        "propagate" : false,
+        "relationTypes" : [ ],
+        "propagateToOwner" : false,
+        "propagateToTenant" : false,
+        "dynamicSeverity" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "fdb6b850-d931-11ef-969e-21459d19647c"
+      },
+      "name" : "ph1 max alarm",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1631,
+        "layoutY" : 2609
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "alarmDetailsBuildTbel" : "var details = {};\nif (metadata.prevAlarmDetails != null) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    metadata.remove('prevAlarmDetails');\n    //now metadata is the same as it comes IN this rule node\n}\n\nreturn details;",
+        "useMessageAlarmData" : false,
+        "overwriteAlarmDetails" : false,
+        "alarmType" : "pH 1 Min Alarm",
+        "severity" : "MAJOR",
+        "propagate" : false,
+        "relationTypes" : [ ],
+        "propagateToOwner" : false,
+        "propagateToTenant" : false,
+        "dynamicSeverity" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "fdb72d80-d931-11ef-969e-21459d19647c"
+      },
+      "name" : "ph1 min alarm",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1377,
+        "layoutY" : 2729
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
+        "tbelScript" : "var v = msg.ph2;\nvar lims = JSON.parse(metadata.ss_ph_limits).ph2;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max) {\n    return ['max']\n} else if (v <= min) {\n    return ['min']\n}"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "fdb77ba0-d931-11ef-969e-21459d19647c"
+      },
+      "name" : "ph2 check",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsSwitchNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1632,
+        "layoutY" : 2690
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "alarmDetailsBuildTbel" : "var details = {};\nif (metadata.prevAlarmDetails != null) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    metadata.remove('prevAlarmDetails');\n    //now metadata is the same as it comes IN this rule node\n}\n\nreturn details;",
+        "useMessageAlarmData" : false,
+        "overwriteAlarmDetails" : false,
+        "alarmType" : "pH 2 Max Alarm",
+        "severity" : "MAJOR",
+        "propagate" : false,
+        "relationTypes" : [ ],
+        "propagateToOwner" : false,
+        "propagateToTenant" : false,
+        "dynamicSeverity" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "fdb7f0d0-d931-11ef-969e-21459d19647c"
+      },
+      "name" : "ph2 max alarm",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1631,
+        "layoutY" : 2770
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "alarmDetailsBuildTbel" : "var details = {};\nif (metadata.prevAlarmDetails != null) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    metadata.remove('prevAlarmDetails');\n    //now metadata is the same as it comes IN this rule node\n}\n\nreturn details;",
+        "useMessageAlarmData" : false,
+        "overwriteAlarmDetails" : false,
+        "alarmType" : "pH 2 Min Alarm",
+        "severity" : "MAJOR",
+        "propagate" : false,
+        "relationTypes" : [ ],
+        "propagateToOwner" : false,
+        "propagateToTenant" : false,
+        "dynamicSeverity" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "fdb83ef0-d931-11ef-969e-21459d19647c"
+      },
+      "name" : "ph2 min alarm",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1378,
+        "layoutY" : 2893
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
+        "tbelScript" : "var v = msg.tds;\nvar lims = JSON.parse(metadata.ss_tds_limits);\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max) {\n    return ['max']\n} else if (v <= min) {\n    return ['min']\n}"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "fdb88d10-d931-11ef-969e-21459d19647c"
+      },
+      "name" : "tds check",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsSwitchNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1633,
+        "layoutY" : 2854
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "alarmDetailsBuildTbel" : "var details = {};\nif (metadata.prevAlarmDetails != null) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    metadata.remove('prevAlarmDetails');\n    //now metadata is the same as it comes IN this rule node\n}\n\nreturn details;",
+        "useMessageAlarmData" : false,
+        "overwriteAlarmDetails" : false,
+        "alarmType" : "TDS Max Alarm",
+        "severity" : "MAJOR",
+        "propagate" : false,
+        "relationTypes" : [ ],
+        "propagateToOwner" : false,
+        "propagateToTenant" : false,
+        "dynamicSeverity" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "fdb90240-d931-11ef-969e-21459d19647c"
+      },
+      "name" : "tds max alarm",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1632,
+        "layoutY" : 2934
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "alarmDetailsBuildTbel" : "var details = {};\nif (metadata.prevAlarmDetails != null) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    metadata.remove('prevAlarmDetails');\n    //now metadata is the same as it comes IN this rule node\n}\n\nreturn details;",
+        "useMessageAlarmData" : false,
+        "overwriteAlarmDetails" : false,
+        "alarmType" : "TDS Min Alarm",
+        "severity" : "MAJOR",
+        "propagate" : false,
+        "relationTypes" : [ ],
+        "propagateToOwner" : false,
+        "propagateToTenant" : false,
+        "dynamicSeverity" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "fdb95060-d931-11ef-969e-21459d19647c"
+      },
+      "name" : "tds min alarm",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
     } ],
     "ruleChainConnections" : null
   },
