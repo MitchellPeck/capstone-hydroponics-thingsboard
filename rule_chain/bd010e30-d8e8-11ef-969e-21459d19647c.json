@@ -6,10 +6,13 @@
     },
     "configuration" : null,
     "debugMode" : false,
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "bd010e30-d8e8-11ef-969e-21459d19647c"
+    },
     "firstRuleNodeId" : {
       "entityType" : "RULE_NODE",
-      "id" : "bd0e0680-d8e8-11ef-969e-21459d19647c"
+      "id" : "bed86b60-d99a-11ef-969e-21459d19647c"
     },
     "id" : {
       "entityType" : "RULE_CHAIN",
@@ -408,7 +411,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "bd0b4760-d8e8-11ef-969e-21459d19647c"
+        "id" : "bed6e4c0-d99a-11ef-969e-21459d19647c"
       },
       "name" : "Save Timeseries",
       "queueName" : null,
@@ -432,7 +435,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "bd0bbc90-d8e8-11ef-969e-21459d19647c"
+        "id" : "bed732e0-d99a-11ef-969e-21459d19647c"
       },
       "name" : "Save Client Attributes",
       "queueName" : null,
@@ -453,7 +456,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "bd0c31c0-d8e8-11ef-969e-21459d19647c"
+        "id" : "bed78100-d99a-11ef-969e-21459d19647c"
       },
       "name" : "Message Type Switch",
       "queueName" : null,
@@ -476,7 +479,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "bd0c7fe0-d8e8-11ef-969e-21459d19647c"
+        "id" : "bed7a810-d99a-11ef-969e-21459d19647c"
       },
       "name" : "Log RPC from Device",
       "queueName" : null,
@@ -499,7 +502,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "bd0d1c20-d8e8-11ef-969e-21459d19647c"
+        "id" : "bed7f630-d99a-11ef-969e-21459d19647c"
       },
       "name" : "Log Other",
       "queueName" : null,
@@ -520,7 +523,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "bd0d6a40-d8e8-11ef-969e-21459d19647c"
+        "id" : "bed81d40-d99a-11ef-969e-21459d19647c"
       },
       "name" : "RPC Call Request",
       "queueName" : null,
@@ -543,7 +546,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "bd0e0680-d8e8-11ef-969e-21459d19647c"
+        "id" : "bed86b60-d99a-11ef-969e-21459d19647c"
       },
       "name" : "Device Profile Node",
       "queueName" : null,
@@ -567,7 +570,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "f7795bc0-d8e9-11ef-969e-21459d19647c"
+        "id" : "bed8b980-d99a-11ef-969e-21459d19647c"
       },
       "name" : "t1 check",
       "queueName" : null,
@@ -595,7 +598,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "cfc92eb0-d8ea-11ef-969e-21459d19647c"
+        "id" : "bed8e090-d99a-11ef-969e-21459d19647c"
       },
       "name" : "get temperature limits",
       "queueName" : null,
@@ -623,7 +626,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "1e4677a0-d8f0-11ef-969e-21459d19647c"
+        "id" : "bed92eb0-d99a-11ef-969e-21459d19647c"
       },
       "name" : "t2 check",
       "queueName" : null,
@@ -656,7 +659,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "1e4a2120-d8f0-11ef-969e-21459d19647c"
+        "id" : "bed9a3e0-d99a-11ef-969e-21459d19647c"
       },
       "name" : "t1 alarm",
       "queueName" : null,
@@ -693,7 +696,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "77d9ae40-d8f0-11ef-969e-21459d19647c"
+        "id" : "beda1910-d99a-11ef-969e-21459d19647c"
       },
       "name" : "t2 alarm",
       "queueName" : null,
@@ -717,7 +720,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "f39ac100-d8f4-11ef-969e-21459d19647c"
+        "id" : "beda4020-d99a-11ef-969e-21459d19647c"
       },
       "name" : "wd1 check",
       "queueName" : null,
@@ -754,7 +757,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "f39b3630-d8f4-11ef-969e-21459d19647c"
+        "id" : "beda8e40-d99a-11ef-969e-21459d19647c"
       },
       "name" : "wd1 max alarm",
       "queueName" : null,
@@ -791,7 +794,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "69f21410-d923-11ef-969e-21459d19647c"
+        "id" : "bedadc60-d99a-11ef-969e-21459d19647c"
       },
       "name" : "wd1 min alarm",
       "queueName" : null,
@@ -819,7 +822,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "69f28940-d923-11ef-969e-21459d19647c"
+        "id" : "bedb2a80-d99a-11ef-969e-21459d19647c"
       },
       "name" : "wd2 check",
       "queueName" : null,
@@ -856,7 +859,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "69f2fe70-d923-11ef-969e-21459d19647c"
+        "id" : "bedb78a0-d99a-11ef-969e-21459d19647c"
       },
       "name" : "wd2 max alarm",
       "queueName" : null,
@@ -893,7 +896,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "69f40fe0-d923-11ef-969e-21459d19647c"
+        "id" : "bedbc6c0-d99a-11ef-969e-21459d19647c"
       },
       "name" : "wd2 min alarm",
       "queueName" : null,
@@ -925,7 +928,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "7ce98c80-d926-11ef-969e-21459d19647c"
+        "id" : "bedc14e0-d99a-11ef-969e-21459d19647c"
       },
       "name" : "get bed limits",
       "queueName" : null,
@@ -957,7 +960,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "906de300-d926-11ef-969e-21459d19647c"
+        "id" : "bedc6300-d99a-11ef-969e-21459d19647c"
       },
       "name" : "get bed limits",
       "queueName" : null,
@@ -985,7 +988,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "eb7d2060-d928-11ef-969e-21459d19647c"
+        "id" : "bedc8a10-d99a-11ef-969e-21459d19647c"
       },
       "name" : "wd3 check",
       "queueName" : null,
@@ -1022,7 +1025,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "eb7d9590-d928-11ef-969e-21459d19647c"
+        "id" : "bedcff40-d99a-11ef-969e-21459d19647c"
       },
       "name" : "wd3 max alarm",
       "queueName" : null,
@@ -1059,7 +1062,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "eb7e31d0-d928-11ef-969e-21459d19647c"
+        "id" : "bedd4d60-d99a-11ef-969e-21459d19647c"
       },
       "name" : "wd3 min alarm",
       "queueName" : null,
@@ -1087,7 +1090,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "eb7ea700-d928-11ef-969e-21459d19647c"
+        "id" : "bedd9b80-d99a-11ef-969e-21459d19647c"
       },
       "name" : "wd4 check",
       "queueName" : null,
@@ -1124,7 +1127,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "eb7f4340-d928-11ef-969e-21459d19647c"
+        "id" : "bedde9a0-d99a-11ef-969e-21459d19647c"
       },
       "name" : "wd4 max alarm",
       "queueName" : null,
@@ -1161,7 +1164,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "eb7fdf80-d928-11ef-969e-21459d19647c"
+        "id" : "bede5ed0-d99a-11ef-969e-21459d19647c"
       },
       "name" : "wd4 min alarm",
       "queueName" : null,
@@ -1177,7 +1180,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "Boolean manual = metadata.ss_manual_control;\nif (manual) return;\n\nvar v1 = msg.water_depth_1;\nvar v2 = msg.water_depth_2;\nvar lims1 = JSON.parse(metadata.ss_bed_1_limits).water_depth;\nvar lims2 = JSON.parse(metadata.ss_bed_2_limits).water_depth;\nvar max1 = lims1.max;\nvar min1 = lims1.min;\nvar max2 = lims2.max;\nvar min2 = lims2.min;\n\nif(v1 >= max1 || v2 >= max2) {\n    return [\"off\"]\n}else if((v1 <= min1 && v2 < max2) || (v1 < max1 && v2 <= min2)) {\n    return [\"on\"]\n}"
+        "tbelScript" : "var manual = metadata.ss_manual_control;\nif (manual) return;\n\nvar v1 = msg.water_depth_1;\nvar v2 = msg.water_depth_2;\nvar lims1 = JSON.parse(metadata.ss_bed_1_limits).water_depth;\nvar lims2 = JSON.parse(metadata.ss_bed_2_limits).water_depth;\nvar max1 = lims1.max;\nvar min1 = lims1.min;\nvar max2 = lims2.max;\nvar min2 = lims2.min;\n\nif(v1 >= max1 || v2 >= max2) {\n    return [\"off\"]\n}else if((v1 <= min1 && v2 < max2) || (v1 < max1 && v2 <= min2)) {\n    return [\"on\"]\n}"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -1189,7 +1192,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "b2a471b0-d92a-11ef-969e-21459d19647c"
+        "id" : "bedeacf0-d99a-11ef-969e-21459d19647c"
       },
       "name" : "pump 1 check",
       "queueName" : null,
@@ -1213,7 +1216,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "1e94aaf0-d92d-11ef-969e-21459d19647c"
+        "id" : "bedefb10-d99a-11ef-969e-21459d19647c"
       },
       "name" : "pump 1 on",
       "queueName" : null,
@@ -1241,7 +1244,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "1e954730-d92d-11ef-969e-21459d19647c"
+        "id" : "bedf7040-d99a-11ef-969e-21459d19647c"
       },
       "name" : "pump 1 off",
       "queueName" : null,
@@ -1257,7 +1260,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "Boolean manual = metadata.ss_manual_control;\nif (manual) return;\n\nvar v1 = msg.water_depth_3;\nvar v2 = msg.water_depth_4;\nvar lims1 = JSON.parse(metadata.ss_bed_3_limits).water_depth;\nvar lims2 = JSON.parse(metadata.ss_bed_4_limits).water_depth;\nvar max1 = lims1.max;\nvar min1 = lims1.min;\nvar max2 = lims2.max;\nvar min2 = lims2.min;\n\nif(v1 >= max1 || v2 >= max2) {\n    return [\"off\"]\n}else if((v1 <= min1 && v2 < max2) || (v1 < max1 && v2 <= min2)) {\n    return [\"on\"]\n}"
+        "tbelScript" : "var manual = metadata.ss_manual_control;\nif (manual) return;\n\nvar v1 = msg.water_depth_3;\nvar v2 = msg.water_depth_4;\nvar lims1 = JSON.parse(metadata.ss_bed_3_limits).water_depth;\nvar lims2 = JSON.parse(metadata.ss_bed_4_limits).water_depth;\nvar max1 = lims1.max;\nvar min1 = lims1.min;\nvar max2 = lims2.max;\nvar min2 = lims2.min;\n\nif(v1 >= max1 || v2 >= max2) {\n    return [\"off\"]\n}else if((v1 <= min1 && v2 < max2) || (v1 < max1 && v2 <= min2)) {\n    return [\"on\"]\n}"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -1269,7 +1272,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "1e959550-d92d-11ef-969e-21459d19647c"
+        "id" : "bedf9750-d99a-11ef-969e-21459d19647c"
       },
       "name" : "pump 2 check",
       "queueName" : null,
@@ -1297,7 +1300,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "1e95e370-d92d-11ef-969e-21459d19647c"
+        "id" : "bedfe570-d99a-11ef-969e-21459d19647c"
       },
       "name" : "pump 2 on",
       "queueName" : null,
@@ -1326,7 +1329,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "1e963190-d92d-11ef-969e-21459d19647c"
+        "id" : "bee03390-d99a-11ef-969e-21459d19647c"
       },
       "name" : "pump power",
       "queueName" : null,
@@ -1354,7 +1357,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "1e967fb0-d92d-11ef-969e-21459d19647c"
+        "id" : "bee05aa0-d99a-11ef-969e-21459d19647c"
       },
       "name" : "pump 2 off",
       "queueName" : null,
@@ -1370,7 +1373,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "Boolean manual = metadata.ss_manual_control;\n\nvar v = msg.light1;\nvar lims = JSON.parse(metadata.ss_bed_1_limits).light;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max && !manual) {\n    return ['max', 'max-control'];\n} else if (v >= max && manual) {\n    return ['max'];\n} else if (v <= min && !manual) {\n    return ['min', 'min-control'];\n} else if (v <= min && manual) {\n    return ['min'];\n}"
+        "tbelScript" : "var manual = metadata.ss_manual_control;\n\nvar v = msg.light1;\nvar lims = JSON.parse(metadata.ss_bed_1_limits).light;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max && !manual) {\n    return ['max', 'max-control'];\n} else if (v >= max && manual) {\n    return ['max'];\n} else if (v <= min && !manual) {\n    return ['min', 'min-control'];\n} else if (v <= min && manual) {\n    return ['min'];\n}"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -1382,7 +1385,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "1e96f4e0-d92d-11ef-969e-21459d19647c"
+        "id" : "bee0a8c0-d99a-11ef-969e-21459d19647c"
       },
       "name" : "l1 check",
       "queueName" : null,
@@ -1419,7 +1422,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "1e979120-d92d-11ef-969e-21459d19647c"
+        "id" : "bee0f6e0-d99a-11ef-969e-21459d19647c"
       },
       "name" : "l1 max alarm",
       "queueName" : null,
@@ -1456,7 +1459,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "1e980650-d92d-11ef-969e-21459d19647c"
+        "id" : "bee14500-d99a-11ef-969e-21459d19647c"
       },
       "name" : "l1 min alarm",
       "queueName" : null,
@@ -1484,7 +1487,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "53d28d60-d930-11ef-969e-21459d19647c"
+        "id" : "bee19320-d99a-11ef-969e-21459d19647c"
       },
       "name" : "light 1 on",
       "queueName" : null,
@@ -1512,7 +1515,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "53d2db80-d930-11ef-969e-21459d19647c"
+        "id" : "bee1ba30-d99a-11ef-969e-21459d19647c"
       },
       "name" : "light 1 off",
       "queueName" : null,
@@ -1541,7 +1544,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "53d329a0-d930-11ef-969e-21459d19647c"
+        "id" : "bee20850-d99a-11ef-969e-21459d19647c"
       },
       "name" : "light power",
       "queueName" : null,
@@ -1557,7 +1560,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "Boolean manual = metadata.ss_manual_control;\n\nvar v = msg.light2;\nvar lims = JSON.parse(metadata.ss_bed_2_limits).light;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max && !manual) {\n    return ['max', 'max-control'];\n} else if (v >= max && manual) {\n    return ['max'];\n} else if (v <= min && !manual) {\n    return ['min', 'min-control'];\n} else if (v <= min && manual) {\n    return ['min'];\n}"
+        "tbelScript" : "var manual = metadata.ss_manual_control;\n\nvar v = msg.light2;\nvar lims = JSON.parse(metadata.ss_bed_2_limits).light;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max && !manual) {\n    return ['max', 'max-control'];\n} else if (v >= max && manual) {\n    return ['max'];\n} else if (v <= min && !manual) {\n    return ['min', 'min-control'];\n} else if (v <= min && manual) {\n    return ['min'];\n}"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -1569,7 +1572,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "53d377c0-d930-11ef-969e-21459d19647c"
+        "id" : "bee25670-d99a-11ef-969e-21459d19647c"
       },
       "name" : "l2 check",
       "queueName" : null,
@@ -1606,7 +1609,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "53d3ecf0-d930-11ef-969e-21459d19647c"
+        "id" : "bee2a490-d99a-11ef-969e-21459d19647c"
       },
       "name" : "l2 max alarm",
       "queueName" : null,
@@ -1643,7 +1646,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "53d46220-d930-11ef-969e-21459d19647c"
+        "id" : "bee2f2b0-d99a-11ef-969e-21459d19647c"
       },
       "name" : "l2 min alarm",
       "queueName" : null,
@@ -1671,7 +1674,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "53d4d750-d930-11ef-969e-21459d19647c"
+        "id" : "bee319c0-d99a-11ef-969e-21459d19647c"
       },
       "name" : "light 2 on",
       "queueName" : null,
@@ -1699,7 +1702,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "53d52570-d930-11ef-969e-21459d19647c"
+        "id" : "bee367e0-d99a-11ef-969e-21459d19647c"
       },
       "name" : "light 2 off",
       "queueName" : null,
@@ -1715,7 +1718,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "Boolean manual = metadata.ss_manual_control;\n\nvar v = msg.light3;\nvar lims = JSON.parse(metadata.ss_bed_3_limits).light;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max && !manual) {\n    return ['max', 'max-control'];\n} else if (v >= max && manual) {\n    return ['max'];\n} else if (v <= min && !manual) {\n    return ['min', 'min-control'];\n} else if (v <= min && manual) {\n    return ['min'];\n}"
+        "tbelScript" : "var manual = metadata.ss_manual_control;\n\nvar v = msg.light3;\nvar lims = JSON.parse(metadata.ss_bed_3_limits).light;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max && !manual) {\n    return ['max', 'max-control'];\n} else if (v >= max && manual) {\n    return ['max'];\n} else if (v <= min && !manual) {\n    return ['min', 'min-control'];\n} else if (v <= min && manual) {\n    return ['min'];\n}"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -1727,7 +1730,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "53d59aa0-d930-11ef-969e-21459d19647c"
+        "id" : "bee38ef0-d99a-11ef-969e-21459d19647c"
       },
       "name" : "l3 check",
       "queueName" : null,
@@ -1764,7 +1767,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "53d60fd0-d930-11ef-969e-21459d19647c"
+        "id" : "bee3dd10-d99a-11ef-969e-21459d19647c"
       },
       "name" : "l3 max alarm",
       "queueName" : null,
@@ -1801,7 +1804,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "53d68500-d930-11ef-969e-21459d19647c"
+        "id" : "bee42b30-d99a-11ef-969e-21459d19647c"
       },
       "name" : "l3 min alarm",
       "queueName" : null,
@@ -1829,7 +1832,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "53d6d320-d930-11ef-969e-21459d19647c"
+        "id" : "bee47950-d99a-11ef-969e-21459d19647c"
       },
       "name" : "light 3 on",
       "queueName" : null,
@@ -1857,7 +1860,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "53d72140-d930-11ef-969e-21459d19647c"
+        "id" : "bee4c770-d99a-11ef-969e-21459d19647c"
       },
       "name" : "light 3 off",
       "queueName" : null,
@@ -1873,7 +1876,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "Boolean manual = metadata.ss_manual_control;\n\nvar v = msg.light4;\nvar lims = JSON.parse(metadata.ss_bed_4_limits).light;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max && !manual) {\n    return ['max', 'max-control'];\n} else if (v >= max && manual) {\n    return ['max'];\n} else if (v <= min && !manual) {\n    return ['min', 'min-control'];\n} else if (v <= min && manual) {\n    return ['min'];\n}"
+        "tbelScript" : "var manual = metadata.ss_manual_control;\n\nvar v = msg.light4;\nvar lims = JSON.parse(metadata.ss_bed_4_limits).light;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max && !manual) {\n    return ['max', 'max-control'];\n} else if (v >= max && manual) {\n    return ['max'];\n} else if (v <= min && !manual) {\n    return ['min', 'min-control'];\n} else if (v <= min && manual) {\n    return ['min'];\n}"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -1885,7 +1888,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "53d76f60-d930-11ef-969e-21459d19647c"
+        "id" : "bee4ee80-d99a-11ef-969e-21459d19647c"
       },
       "name" : "l4 check",
       "queueName" : null,
@@ -1922,7 +1925,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "53d80ba0-d930-11ef-969e-21459d19647c"
+        "id" : "bee53ca0-d99a-11ef-969e-21459d19647c"
       },
       "name" : "l4 max alarm",
       "queueName" : null,
@@ -1959,7 +1962,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "53d880d0-d930-11ef-969e-21459d19647c"
+        "id" : "bee5b1d0-d99a-11ef-969e-21459d19647c"
       },
       "name" : "l4 min alarm",
       "queueName" : null,
@@ -1987,7 +1990,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "53d8cef0-d930-11ef-969e-21459d19647c"
+        "id" : "bee5d8e0-d99a-11ef-969e-21459d19647c"
       },
       "name" : "light 4 on",
       "queueName" : null,
@@ -2015,7 +2018,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "53d94420-d930-11ef-969e-21459d19647c"
+        "id" : "bee62700-d99a-11ef-969e-21459d19647c"
       },
       "name" : "light 4 off",
       "queueName" : null,
@@ -2047,7 +2050,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "fdb57fd0-d931-11ef-969e-21459d19647c"
+        "id" : "bee67520-d99a-11ef-969e-21459d19647c"
       },
       "name" : "get ph limits",
       "queueName" : null,
@@ -2079,7 +2082,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "fdb5cdf0-d931-11ef-969e-21459d19647c"
+        "id" : "bee69c30-d99a-11ef-969e-21459d19647c"
       },
       "name" : "get tds limits",
       "queueName" : null,
@@ -2107,7 +2110,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "fdb64320-d931-11ef-969e-21459d19647c"
+        "id" : "bee6ea50-d99a-11ef-969e-21459d19647c"
       },
       "name" : "ph1 check",
       "queueName" : null,
@@ -2144,7 +2147,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "fdb6b850-d931-11ef-969e-21459d19647c"
+        "id" : "bee73870-d99a-11ef-969e-21459d19647c"
       },
       "name" : "ph1 max alarm",
       "queueName" : null,
@@ -2181,7 +2184,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "fdb72d80-d931-11ef-969e-21459d19647c"
+        "id" : "bee78690-d99a-11ef-969e-21459d19647c"
       },
       "name" : "ph1 min alarm",
       "queueName" : null,
@@ -2209,7 +2212,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "fdb77ba0-d931-11ef-969e-21459d19647c"
+        "id" : "bee7d4b0-d99a-11ef-969e-21459d19647c"
       },
       "name" : "ph2 check",
       "queueName" : null,
@@ -2246,7 +2249,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "fdb7f0d0-d931-11ef-969e-21459d19647c"
+        "id" : "bee822d0-d99a-11ef-969e-21459d19647c"
       },
       "name" : "ph2 max alarm",
       "queueName" : null,
@@ -2283,7 +2286,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "fdb83ef0-d931-11ef-969e-21459d19647c"
+        "id" : "bee870f0-d99a-11ef-969e-21459d19647c"
       },
       "name" : "ph2 min alarm",
       "queueName" : null,
@@ -2311,7 +2314,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "fdb88d10-d931-11ef-969e-21459d19647c"
+        "id" : "bee89800-d99a-11ef-969e-21459d19647c"
       },
       "name" : "tds check",
       "queueName" : null,
@@ -2348,7 +2351,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "fdb90240-d931-11ef-969e-21459d19647c"
+        "id" : "bee90d30-d99a-11ef-969e-21459d19647c"
       },
       "name" : "tds max alarm",
       "queueName" : null,
@@ -2385,7 +2388,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "fdb95060-d931-11ef-969e-21459d19647c"
+        "id" : "bee95b50-d99a-11ef-969e-21459d19647c"
       },
       "name" : "tds min alarm",
       "queueName" : null,
@@ -2417,7 +2420,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "a2de43f0-d993-11ef-969e-21459d19647c"
+        "id" : "bee9a970-d99a-11ef-969e-21459d19647c"
       },
       "name" : "get nutrients schedule",
       "queueName" : null,
@@ -2445,7 +2448,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "a2de9210-d993-11ef-969e-21459d19647c"
+        "id" : "bee9f790-d99a-11ef-969e-21459d19647c"
       },
       "name" : "nutrients1 check",
       "queueName" : null,
@@ -2469,7 +2472,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "a2dee030-d993-11ef-969e-21459d19647c"
+        "id" : "beea45b0-d99a-11ef-969e-21459d19647c"
       },
       "name" : "update nutrients 2 schedule",
       "queueName" : null,
@@ -2498,7 +2501,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "a2df2e50-d993-11ef-969e-21459d19647c"
+        "id" : "beea93d0-d99a-11ef-969e-21459d19647c"
       },
       "name" : "nutrients1 schedule",
       "queueName" : null,
@@ -2526,7 +2529,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "a2df7c70-d993-11ef-969e-21459d19647c"
+        "id" : "beeae1f0-d99a-11ef-969e-21459d19647c"
       },
       "name" : "nutrients 1 on",
       "queueName" : null,
@@ -2554,7 +2557,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "a2dfca90-d993-11ef-969e-21459d19647c"
+        "id" : "beeb3010-d99a-11ef-969e-21459d19647c"
       },
       "name" : "nutrients 1 off",
       "queueName" : null,
@@ -2583,7 +2586,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "a2e018b0-d993-11ef-969e-21459d19647c"
+        "id" : "beeb7e30-d99a-11ef-969e-21459d19647c"
       },
       "name" : "nutrients1 power",
       "queueName" : null,
@@ -2611,7 +2614,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "1b613f80-d994-11ef-969e-21459d19647c"
+        "id" : "beebcc50-d99a-11ef-969e-21459d19647c"
       },
       "name" : "nutrients2 check",
       "queueName" : null,
@@ -2639,7 +2642,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "1b618da0-d994-11ef-969e-21459d19647c"
+        "id" : "beec1a70-d99a-11ef-969e-21459d19647c"
       },
       "name" : "update nutrients 1 schedule",
       "queueName" : null,
@@ -2668,7 +2671,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "1b61dbc0-d994-11ef-969e-21459d19647c"
+        "id" : "beec8fa0-d99a-11ef-969e-21459d19647c"
       },
       "name" : "nutrients2 schedule",
       "queueName" : null,
@@ -2696,7 +2699,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "1b6250f0-d994-11ef-969e-21459d19647c"
+        "id" : "beecddc0-d99a-11ef-969e-21459d19647c"
       },
       "name" : "nutrients 2 on",
       "queueName" : null,
@@ -2724,7 +2727,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "1b629f10-d994-11ef-969e-21459d19647c"
+        "id" : "beed2be0-d99a-11ef-969e-21459d19647c"
       },
       "name" : "nutrients 2 off",
       "queueName" : null,
@@ -2753,7 +2756,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "1b62ed30-d994-11ef-969e-21459d19647c"
+        "id" : "beed7a00-d99a-11ef-969e-21459d19647c"
       },
       "name" : "nutrients2 power",
       "queueName" : null,
@@ -2781,7 +2784,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "1b633b50-d994-11ef-969e-21459d19647c"
+        "id" : "beeda110-d99a-11ef-969e-21459d19647c"
       },
       "name" : "nutrients3 check",
       "queueName" : null,
@@ -2809,7 +2812,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "1b638970-d994-11ef-969e-21459d19647c"
+        "id" : "beedef30-d99a-11ef-969e-21459d19647c"
       },
       "name" : "update nutrients 3 schedule",
       "queueName" : null,
@@ -2838,7 +2841,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "1b63d790-d994-11ef-969e-21459d19647c"
+        "id" : "beee3d50-d99a-11ef-969e-21459d19647c"
       },
       "name" : "nutrients1 schedule",
       "queueName" : null,
@@ -2866,7 +2869,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "1b644cc0-d994-11ef-969e-21459d19647c"
+        "id" : "beee8b70-d99a-11ef-969e-21459d19647c"
       },
       "name" : "nutrients 3 on",
       "queueName" : null,
@@ -2894,7 +2897,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "1b649ae0-d994-11ef-969e-21459d19647c"
+        "id" : "beeed990-d99a-11ef-969e-21459d19647c"
       },
       "name" : "nutrients 3 off",
       "queueName" : null,
@@ -2923,7 +2926,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "1b64e900-d994-11ef-969e-21459d19647c"
+        "id" : "beef27b0-d99a-11ef-969e-21459d19647c"
       },
       "name" : "nutrients3 power",
       "queueName" : null,
