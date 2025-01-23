@@ -336,10 +336,6 @@
       "toIndex" : 78,
       "type" : "Success"
     }, {
-      "fromIndex" : 65,
-      "toIndex" : 84,
-      "type" : "Success"
-    }, {
       "fromIndex" : 66,
       "toIndex" : 69,
       "type" : "on"
@@ -378,14 +374,6 @@
     }, {
       "fromIndex" : 73,
       "toIndex" : 68,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 73,
-      "toIndex" : 85,
-      "type" : "Failure"
-    }, {
-      "fromIndex" : 73,
-      "toIndex" : 85,
       "type" : "Success"
     }, {
       "fromIndex" : 75,
@@ -2429,7 +2417,7 @@
         "tellFailureIfAbsent" : true,
         "fetchTo" : "METADATA",
         "clientAttributeNames" : [ ],
-        "sharedAttributeNames" : [ ],
+        "sharedAttributeNames" : [ "nutrients1", "nutrients2", "nutrients3" ],
         "serverAttributeNames" : [ "nutrients_schedule", "manual_control" ],
         "latestTsKeyNames" : [ ],
         "getLatestValueWithTs" : false
@@ -2460,7 +2448,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "var state = msg.nutrients1;\nvar schedule = JSON.parse(metadata.ss_nutrients_schedule).nutrients1;\nvar repeat = schedule.repeat;\nvar duration = schedule.duration;\nvar last = schedule.last;\nvar next = schedule.next;\nvar off = schedule.off;\n\nvar now = new Date().getTime()/1000;\n\nif (state == \"true\") {\n    //Pump is on\n    if (now >= off) {\n        //Pump needs to be turned off\n        return ['off']\n    } else return []\n} else {\n    //Pump is off\n    if (now >= next) {\n        //Pump needs to be turned on\n        //Last, next, and off need to be updated\n        ['on', 'update']\n    } else return []\n}\n    "
+        "tbelScript" : "var state = metadata.shared_nutrients1;\nvar schedule = JSON.parse(metadata.ss_nutrients_schedule).nutrients1;\nvar repeat = schedule.repeat;\nvar duration = schedule.duration;\nvar last = schedule.last;\nvar next = schedule.next;\nvar off = schedule.off;\n\nvar now = new Date().getTime()/1000;\n\nif (state == \"true\") {\n    //Pump is on\n    if (now >= off) {\n        //Pump needs to be turned off\n        return ['off']\n    } else return []\n} else {\n    //Pump is off\n    if (now >= next) {\n        //Pump needs to be turned on\n        //Last, next, and off need to be updated\n        ['on', 'update']\n    } else return []\n}\n    "
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -2626,7 +2614,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "var state = msg.nutrients2;\nvar schedule = JSON.parse(metadata.ss_nutrients_schedule).nutrients2;\nvar repeat = schedule.repeat;\nvar duration = schedule.duration;\nvar last = schedule.last;\nvar next = schedule.next;\nvar off = schedule.off;\n\nvar now = new Date().getTime()/1000;\n\nif (state == \"true\") {\n    //Pump is on\n    if (now >= off) {\n        //Pump needs to be turned off\n        return ['off']\n    } else return []\n} else {\n    //Pump is off\n    if (now >= next) {\n        //Pump needs to be turned on\n        //Last, next, and off need to be updated\n        ['on', 'update']\n    } else return []\n}\n    "
+        "tbelScript" : "var state = metadata.shared_nutrients2;\nvar schedule = JSON.parse(metadata.ss_nutrients_schedule).nutrients2;\nvar repeat = schedule.repeat;\nvar duration = schedule.duration;\nvar last = schedule.last;\nvar next = schedule.next;\nvar off = schedule.off;\n\nvar now = new Date().getTime()/1000;\n\nif (state == \"true\") {\n    //Pump is on\n    if (now >= off) {\n        //Pump needs to be turned off\n        return ['off']\n    } else return []\n} else {\n    //Pump is off\n    if (now >= next) {\n        //Pump needs to be turned on\n        //Last, next, and off need to be updated\n        ['on', 'update']\n    } else return []\n}\n    "
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -2796,7 +2784,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "var state = msg.nutrients3;\nvar schedule = JSON.parse(metadata.ss_nutrients_schedule).nutrients3;\nvar repeat = schedule.repeat;\nvar duration = schedule.duration;\nvar last = schedule.last;\nvar next = schedule.next;\nvar off = schedule.off;\n\nvar now = new Date().getTime()/1000;\n\nif (state == \"true\") {\n    //Pump is on\n    if (now >= off) {\n        //Pump needs to be turned off\n        return ['off']\n    } else return []\n} else {\n    //Pump is off\n    if (now >= next) {\n        //Pump needs to be turned on\n        //Last, next, and off need to be updated\n        ['on', 'update']\n    } else return []\n}\n    "
+        "tbelScript" : "var state = metadata.shared_nutrients3;\nvar schedule = JSON.parse(metadata.ss_nutrients_schedule).nutrients3;\nvar repeat = schedule.repeat;\nvar duration = schedule.duration;\nvar last = schedule.last;\nvar next = schedule.next;\nvar off = schedule.off;\n\nvar now = new Date().getTime()/1000;\n\nif (state == \"true\") {\n    //Pump is on\n    if (now >= off) {\n        //Pump needs to be turned off\n        return ['off']\n    } else return []\n} else {\n    //Pump is off\n    if (now >= next) {\n        //Pump needs to be turned on\n        //Last, next, and off need to be updated\n        ['on', 'update']\n    } else return []\n}\n    "
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -2957,54 +2945,6 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.telemetry.TbMsgAttributesNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1410,
-        "layoutY" : 3242
-      },
-      "configuration" : {
-        "scriptLang" : "TBEL",
-        "jsScript" : "return '\\nIncoming message:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata);",
-        "tbelScript" : "var now = new Date().getTime()/1000;\n\nreturn '\\nIncoming message:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata) + '\\nTime:\\n' + now;"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugSettings" : null,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "11144a50-d99d-11ef-969e-21459d19647c"
-      },
-      "name" : "l",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.action.TbLogNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1840,
-        "layoutY" : 3118
-      },
-      "configuration" : {
-        "scriptLang" : "TBEL",
-        "jsScript" : "return '\\nIncoming message:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata);",
-        "tbelScript" : "return '\\nIncoming message111:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata);"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugSettings" : null,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "99bd12a0-d99e-11ef-969e-21459d19647c"
-      },
-      "name" : "l1",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.action.TbLogNode"
     } ],
     "ruleChainConnections" : null
   },
