@@ -29,6 +29,10 @@
       "toIndex" : 32,
       "type" : "Success"
     }, {
+      "fromIndex" : 0,
+      "toIndex" : 33,
+      "type" : "Success"
+    }, {
       "fromIndex" : 2,
       "toIndex" : 0,
       "type" : "Post telemetry"
