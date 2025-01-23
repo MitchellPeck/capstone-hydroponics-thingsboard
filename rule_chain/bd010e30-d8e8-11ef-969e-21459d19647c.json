@@ -1373,7 +1373,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "var manual = metadata.ss_manual_control;\n\nvar v = msg.light1;\nvar lims = JSON.parse(metadata.ss_bed_1_limits).light;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max && !manual) {\n    return ['max', 'max-control'];\n} else if (v >= max && manual) {\n    return ['max'];\n} else if (v <= min && !manual) {\n    return ['min', 'min-control'];\n} else if (v <= min && manual) {\n    return ['min'];\n} else return []"
+        "tbelScript" : "var manual = metadata.ss_manual_control;\n\nvar v = msg.light1;\nvar lims = JSON.parse(metadata.ss_bed_1_limits).light;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max && manual != \"true\") {\n    return ['max', 'max-control'];\n} else if (v >= max && manual == \"true\") {\n    return ['max'];\n} else if (v <= min && manual != \"true\") {\n    return ['min', 'min-control'];\n} else if (v <= min && manual == \"true\") {\n    return ['min'];\n} else return []"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -1560,7 +1560,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "var manual = metadata.ss_manual_control;\n\nvar v = msg.light2;\nvar lims = JSON.parse(metadata.ss_bed_2_limits).light;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max && !manual) {\n    return ['max', 'max-control'];\n} else if (v >= max && manual) {\n    return ['max'];\n} else if (v <= min && !manual) {\n    return ['min', 'min-control'];\n} else if (v <= min && manual) {\n    return ['min'];\n} else return []"
+        "tbelScript" : "var manual = metadata.ss_manual_control;\n\nvar v = msg.light2;\nvar lims = JSON.parse(metadata.ss_bed_2_limits).light;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max && manual != \"true\") {\n    return ['max', 'max-control'];\n} else if (v >= max && manual == \"true\") {\n    return ['max'];\n} else if (v <= min && manual != \"true\") {\n    return ['min', 'min-control'];\n} else if (v <= min && manual == \"true\") {\n    return ['min'];\n} else return []"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -1718,7 +1718,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "var manual = metadata.ss_manual_control;\n\nvar v = msg.light3;\nvar lims = JSON.parse(metadata.ss_bed_3_limits).light;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max && !manual) {\n    return ['max', 'max-control'];\n} else if (v >= max && manual) {\n    return ['max'];\n} else if (v <= min && !manual) {\n    return ['min', 'min-control'];\n} else if (v <= min && manual) {\n    return ['min'];\n} else return []"
+        "tbelScript" : "var manual = metadata.ss_manual_control;\n\nvar v = msg.light3;\nvar lims = JSON.parse(metadata.ss_bed_3_limits).light;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max && manual != \"true\") {\n    return ['max', 'max-control'];\n} else if (v >= max && manual == \"true\") {\n    return ['max'];\n} else if (v <= min && manual != \"true\") {\n    return ['min', 'min-control'];\n} else if (v <= min && manual == \"true\") {\n    return ['min'];\n} else return []"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -1876,7 +1876,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "var manual = metadata.ss_manual_control;\n\nvar v = msg.light4;\nvar lims = JSON.parse(metadata.ss_bed_4_limits).light;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max && !manual) {\n    return ['max', 'max-control'];\n} else if (v >= max && manual) {\n    return ['max'];\n} else if (v <= min && !manual) {\n    return ['min', 'min-control'];\n} else if (v <= min && manual) {\n    return ['min'];\n} else return []"
+        "tbelScript" : "var manual = metadata.ss_manual_control;\n\nvar v = msg.light4;\nvar lims = JSON.parse(metadata.ss_bed_4_limits).light;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max && manual != \"true\") {\n    return ['max', 'max-control'];\n} else if (v >= max && manual == \"true\") {\n    return ['max'];\n} else if (v <= min && manual != \"true\") {\n    return ['min', 'min-control'];\n} else if (v <= min && manual == \"true\") {\n    return ['min'];\n} else return []"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
