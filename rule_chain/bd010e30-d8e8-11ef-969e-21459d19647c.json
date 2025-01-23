@@ -41,6 +41,10 @@
       "toIndex" : 55,
       "type" : "Success"
     }, {
+      "fromIndex" : 0,
+      "toIndex" : 65,
+      "type" : "Success"
+    }, {
       "fromIndex" : 2,
       "toIndex" : 0,
       "type" : "Post telemetry"
@@ -316,6 +320,34 @@
       "fromIndex" : 62,
       "toIndex" : 64,
       "type" : "min"
+    }, {
+      "fromIndex" : 65,
+      "toIndex" : 66,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 66,
+      "toIndex" : 67,
+      "type" : "update"
+    }, {
+      "fromIndex" : 66,
+      "toIndex" : 69,
+      "type" : "on"
+    }, {
+      "fromIndex" : 66,
+      "toIndex" : 70,
+      "type" : "off"
+    }, {
+      "fromIndex" : 67,
+      "toIndex" : 68,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 69,
+      "toIndex" : 71,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 70,
+      "toIndex" : 71,
+      "type" : "Success"
     } ],
     "firstNodeIndex" : 6,
     "nodes" : [ {
@@ -2217,7 +2249,7 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1378,
+        "layoutX" : 1375,
         "layoutY" : 2893
       },
       "configuration" : {
@@ -2245,7 +2277,7 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1633,
+        "layoutX" : 1630,
         "layoutY" : 2854
       },
       "configuration" : {
@@ -2282,7 +2314,7 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1632,
+        "layoutX" : 1629,
         "layoutY" : 2934
       },
       "configuration" : {
@@ -2316,6 +2348,204 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1131,
+        "layoutY" : 3128
+      },
+      "configuration" : {
+        "tellFailureIfAbsent" : true,
+        "fetchTo" : "METADATA",
+        "clientAttributeNames" : [ ],
+        "sharedAttributeNames" : [ ],
+        "serverAttributeNames" : [ "nutrients_schedule", "manual_control" ],
+        "latestTsKeyNames" : [ ],
+        "getLatestValueWithTs" : false
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "a2de43f0-d993-11ef-969e-21459d19647c"
+      },
+      "name" : "get nutrients schedule",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1374,
+        "layoutY" : 3100
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
+        "tbelScript" : "var state = msg.nutrients1;\nvar schedule = JSON.parse(metadata.ss_nutrients_schedule).nutrients1;\nvar repeat = schedule.repeat;\nvar duration = schedule.duration;\nvar last = schedule.last;\nvar next = schedule.next;\nvar off = schedule.off;\n\nvar now = Date.now();\n\nif (state) {\n    //Pump is on\n    if (now >= off) {\n        //Pump needs to be turned off\n        return ['off']\n    }\n} else {\n    //Pump is off\n    if (now >= next) {\n        //Pump needs to be turned on\n        //Last, next, and off need to be updated\n        ['on', 'update']\n    }\n}\n    "
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "a2de9210-d993-11ef-969e-21459d19647c"
+      },
+      "name" : "nutrients1 check",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsSwitchNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1631,
+        "layoutY" : 3178
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "var mainSchedule = JSON.parse(metadata.ss_nutrients_schedule);\nvar schedule1 = mainSchedule.nutrients1;\nvar schedule2 = mainSchedule.nutrients2;\nvar schedule3 = mainSchedule.nutrients3;\n\nvar now = Date.now();\n\nvar newSchedule = {\n  \"nutrients1\": {\n    \"repeat\": schedule1.repeat,\n    \"duration\": schedule1.duration,\n    \"last\": now,\n    \"next\": now+schedule1.repeat,\n    \"off\": now+schedule1.duration\n  },\n  \"nutrients2\": {\n    \"repeat\": schedule2.repeat,\n    \"duration\": schedule2.duration,\n    \"last\": schedule2.last,\n    \"next\": schedule2.next,\n    \"off\": schedule2.off\n  },\n  \"nutrients3\": {\n    \"repeat\": schedule3.repeat,\n    \"duration\": schedule3.duration,\n    \"last\": schedule3.last,\n    \"next\": schedule3.next,\n    \"off\": schedule3.off\n  }\n}\n\nreturn {msg: {nutrients_schedule: newSchedule}, metadata: metadata, msgType: \"POST_ATTRIBUTES_REQUEST\"};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "a2dee030-d993-11ef-969e-21459d19647c"
+      },
+      "name" : "update nutrients 1 schedule",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1923,
+        "layoutY" : 3179
+      },
+      "configuration" : {
+        "scope" : "SERVER_SCOPE",
+        "notifyDevice" : false,
+        "sendAttributesUpdatedNotification" : false,
+        "updateAttributesOnlyOnValueChange" : false
+      },
+      "configurationVersion" : 2,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "a2df2e50-d993-11ef-969e-21459d19647c"
+      },
+      "name" : "nutrients1 schedule",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1629,
+        "layoutY" : 3016
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: {nutrients1: true}, metadata: metadata, msgType: \"POST_ATTRIBUTES_REQUEST\"};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "a2df7c70-d993-11ef-969e-21459d19647c"
+      },
+      "name" : "nutrients 1 on",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1630,
+        "layoutY" : 3098
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: {nutrients1: false}, metadata: metadata, msgType: \"POST_ATTRIBUTES_REQUEST\"};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "a2dfca90-d993-11ef-969e-21459d19647c"
+      },
+      "name" : "nutrients 1 off",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1922,
+        "layoutY" : 3055
+      },
+      "configuration" : {
+        "scope" : "SHARED_SCOPE",
+        "notifyDevice" : false,
+        "sendAttributesUpdatedNotification" : false,
+        "updateAttributesOnlyOnValueChange" : false
+      },
+      "configurationVersion" : 2,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "a2e018b0-d993-11ef-969e-21459d19647c"
+      },
+      "name" : "nutrients1 power",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgAttributesNode"
     } ],
     "ruleChainConnections" : null
   },
