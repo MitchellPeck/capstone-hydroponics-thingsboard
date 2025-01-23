@@ -25,6 +25,10 @@
       "toIndex" : 8,
       "type" : "Success"
     }, {
+      "fromIndex" : 0,
+      "toIndex" : 32,
+      "type" : "Success"
+    }, {
       "fromIndex" : 2,
       "toIndex" : 0,
       "type" : "Post telemetry"
@@ -59,22 +63,6 @@
     }, {
       "fromIndex" : 8,
       "toIndex" : 9,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 8,
-      "toIndex" : 12,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 8,
-      "toIndex" : 17,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 8,
-      "toIndex" : 22,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 8,
-      "toIndex" : 27,
       "type" : "Success"
     }, {
       "fromIndex" : 9,
@@ -143,6 +131,22 @@
     }, {
       "fromIndex" : 29,
       "toIndex" : 30,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 32,
+      "toIndex" : 12,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 32,
+      "toIndex" : 17,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 32,
+      "toIndex" : 22,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 32,
+      "toIndex" : 27,
       "type" : "Success"
     } ],
     "firstNodeIndex" : 6,
@@ -1076,6 +1080,38 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1135,
+        "layoutY" : 756
+      },
+      "configuration" : {
+        "tellFailureIfAbsent" : true,
+        "fetchTo" : "METADATA",
+        "clientAttributeNames" : [ ],
+        "latestTsKeyNames" : [ ],
+        "serverAttributeNames" : [ "bed_1_limits", "bed_2_limits", "bed_3_limits", "bed_4_limits", "ph_limits", "tds_limits", "temperature_limits" ],
+        "sharedAttributeNames" : [ ],
+        "getLatestValueWithTs" : false
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "7ce98c80-d926-11ef-969e-21459d19647c"
+      },
+      "name" : "get server attributes",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetAttributesNode"
     } ],
     "ruleChainConnections" : null
   },
