@@ -2958,7 +2958,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "return '\\nIncoming message:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata);",
-        "tbelScript" : "return '\\nIncoming message:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata);"
+        "tbelScript" : "return '\\nIncoming message:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata) + `\\nTime:\\n` + new Date().getTime()/1000;"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
