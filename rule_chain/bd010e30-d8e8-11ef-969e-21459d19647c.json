@@ -356,6 +356,10 @@
       "toIndex" : 68,
       "type" : "Success"
     }, {
+      "fromIndex" : 67,
+      "toIndex" : 85,
+      "type" : "Success"
+    }, {
       "fromIndex" : 69,
       "toIndex" : 71,
       "type" : "Success"
@@ -2969,6 +2973,30 @@
         "id" : "11144a50-d99d-11ef-969e-21459d19647c"
       },
       "name" : "l",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbLogNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1840,
+        "layoutY" : 3118
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "return '\\nIncoming message:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata);",
+        "tbelScript" : "return '\\nIncoming message111:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata);"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "99bd12a0-d99e-11ef-969e-21459d19647c"
+      },
+      "name" : "l1",
       "queueName" : null,
       "ruleChainId" : null,
       "singletonMode" : false,
