@@ -574,7 +574,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "return msg.temperature > 20;",
-        "tbelScript" : "var v = msg.temperature1;\nvar lims = JSON.parse(metadata.ss_temperature_limits).temperature1;\nvar max = lims.max;\nvar min = lims.min;\n\nreturn v >= max || v <= min;"
+        "tbelScript" : "var v = msg.temperature1;\nvar calibration = JSON.parse(metadata.ss_calibration).temperature.temperature1;\nv += calibration.offset;\nv *= calibration.factor;\n\nvar lims = JSON.parse(metadata.ss_temperature_limits).temperature1;\nvar max = lims.max;\nvar min = lims.min;\n\nreturn v >= max || v <= min;"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -600,7 +600,7 @@
         "fetchTo" : "METADATA",
         "clientAttributeNames" : [ ],
         "sharedAttributeNames" : [ ],
-        "serverAttributeNames" : [ "temperature_limits" ],
+        "serverAttributeNames" : [ "temperature_limits", "calibration" ],
         "latestTsKeyNames" : [ ],
         "getLatestValueWithTs" : false
       },
@@ -626,7 +626,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "return msg.temperature > 20;",
-        "tbelScript" : "var v = msg.temperature2;\nvar lims = JSON.parse(metadata.ss_temperature_limits).temperature2;\nvar max = lims.max;\nvar min = lims.min;\n\nreturn v >= max || v <= min;"
+        "tbelScript" : "var v = msg.temperature2;\nvar calibration = JSON.parse(metadata.ss_calibration).temperature.temperature2;\nv += calibration.offset;\nv *= calibration.factor;\n\nvar lims = JSON.parse(metadata.ss_temperature_limits).temperature2;\nvar max = lims.max;\nvar min = lims.min;\n\nreturn v >= max || v <= min;"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -2048,7 +2048,7 @@
         "fetchTo" : "METADATA",
         "clientAttributeNames" : [ ],
         "sharedAttributeNames" : [ ],
-        "serverAttributeNames" : [ "ph_limits" ],
+        "serverAttributeNames" : [ "ph_limits", "calibration" ],
         "latestTsKeyNames" : [ ],
         "getLatestValueWithTs" : false
       },
@@ -2080,7 +2080,7 @@
         "fetchTo" : "METADATA",
         "clientAttributeNames" : [ ],
         "sharedAttributeNames" : [ ],
-        "serverAttributeNames" : [ "tds_limits" ],
+        "serverAttributeNames" : [ "tds_limits", "calibration" ],
         "latestTsKeyNames" : [ ],
         "getLatestValueWithTs" : false
       },
