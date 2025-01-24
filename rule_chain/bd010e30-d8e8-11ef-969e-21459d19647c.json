@@ -2110,7 +2110,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "var v = msg.ph1;\nvar lims = JSON.parse(metadata.ss_ph_limits).ph1;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max) {\n    return ['max']\n} else if (v <= min) {\n    return ['min']\n} else return []"
+        "tbelScript" : "var v = msg.ph1;\nvar calibration = JSON.parse(metadata.ss_calibration).ph.ph1;\nv += calibration.offset;\nv *= calibration.factor;\n\nvar lims = JSON.parse(metadata.ss_ph_limits).ph1;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max) {\n    return ['max']\n} else if (v <= min) {\n    return ['min']\n} else return []"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -2212,7 +2212,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "var v = msg.ph2;\nvar lims = JSON.parse(metadata.ss_ph_limits).ph2;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max) {\n    return ['max']\n} else if (v <= min) {\n    return ['min']\n} else return []"
+        "tbelScript" : "var v = msg.ph2;\nvar calibration = JSON.parse(metadata.ss_calibration).ph.ph2;\nv += calibration.offset;\nv *= calibration.factor;\n\nvar lims = JSON.parse(metadata.ss_ph_limits).ph2;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max) {\n    return ['max']\n} else if (v <= min) {\n    return ['min']\n} else return []"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -2314,7 +2314,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "var v = msg.tds;\nvar lims = JSON.parse(metadata.ss_tds_limits);\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max) {\n    return ['max']\n} else if (v <= min) {\n    return ['min']\n} else return []"
+        "tbelScript" : "var v = msg.tds;\nvar calibration = JSON.parse(metadata.ss_calibration).tds;\nv += calibration.offset;\nv *= calibration.factor;\n\nvar lims = JSON.parse(metadata.ss_tds_limits);\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max) {\n    return ['max']\n} else if (v <= min) {\n    return ['min']\n} else return []"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
