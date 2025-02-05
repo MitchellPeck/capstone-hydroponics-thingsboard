@@ -7590,8 +7590,8 @@
                       "persistentPollingInterval" : 1000
                     },
                     "getAttribute" : {
-                      "scope" : null,
-                      "key" : "state"
+                      "key" : "state",
+                      "scope" : null
                     },
                     "getTimeSeries" : {
                       "key" : "ph1"
@@ -7602,6 +7602,7 @@
                     },
                     "dataToValue" : {
                       "type" : "NONE",
+                      "compareToValue" : true,
                       "dataToValueFunction" : "/* Should return boolean value */\nreturn data;"
                     }
                   },
@@ -7615,8 +7616,8 @@
                       "persistentPollingInterval" : 1000
                     },
                     "getAttribute" : {
-                      "scope" : "SERVER_SCOPE",
-                      "key" : "ph_limits"
+                      "key" : "ph_limits",
+                      "scope" : "SERVER_SCOPE"
                     },
                     "getTimeSeries" : {
                       "key" : "state"
@@ -7627,6 +7628,7 @@
                     },
                     "dataToValue" : {
                       "type" : "FUNCTION",
+                      "compareToValue" : true,
                       "dataToValueFunction" : "return data.ph1.max;"
                     }
                   },
@@ -7640,8 +7642,8 @@
                       "persistentPollingInterval" : 1000
                     },
                     "getAttribute" : {
-                      "scope" : "SERVER_SCOPE",
-                      "key" : "ph_limits"
+                      "key" : "ph_limits",
+                      "scope" : "SERVER_SCOPE"
                     },
                     "getTimeSeries" : {
                       "key" : "state"
@@ -7652,6 +7654,7 @@
                     },
                     "dataToValue" : {
                       "type" : "FUNCTION",
+                      "compareToValue" : true,
                       "dataToValueFunction" : "return data.ph1.max;"
                     }
                   },
@@ -7665,8 +7668,8 @@
                       "persistentPollingInterval" : 1000
                     },
                     "getAttribute" : {
-                      "scope" : "SERVER_SCOPE",
-                      "key" : "ph_limits"
+                      "key" : "ph_limits",
+                      "scope" : "SERVER_SCOPE"
                     },
                     "getTimeSeries" : {
                       "key" : "state"
@@ -7677,6 +7680,7 @@
                     },
                     "dataToValue" : {
                       "type" : "FUNCTION",
+                      "compareToValue" : true,
                       "dataToValueFunction" : "return data.ph1.min;"
                     }
                   },
@@ -7690,8 +7694,8 @@
                       "persistentPollingInterval" : 1000
                     },
                     "getAttribute" : {
-                      "scope" : "SERVER_SCOPE",
-                      "key" : "ph_limits"
+                      "key" : "ph_limits",
+                      "scope" : "SERVER_SCOPE"
                     },
                     "getTimeSeries" : {
                       "key" : "state"
@@ -7702,6 +7706,7 @@
                     },
                     "dataToValue" : {
                       "type" : "FUNCTION",
+                      "compareToValue" : true,
                       "dataToValueFunction" : "return data.ph1.min;"
                     }
                   },
@@ -7741,10 +7746,10 @@
                 },
                 "properties" : {
                   "minMaxValue" : true,
-                  "minValue" : 60,
-                  "maxValue" : 80,
+                  "minValue" : 5,
+                  "maxValue" : 9,
                   "value" : true,
-                  "valueDecimals" : 0,
+                  "valueDecimals" : 2,
                   "valueFont" : {
                     "size" : 60,
                     "sizeUnit" : "px",
@@ -7861,8 +7866,8 @@
                       "persistentPollingInterval" : 1000
                     },
                     "getAttribute" : {
-                      "scope" : null,
-                      "key" : "state"
+                      "key" : "state",
+                      "scope" : null
                     },
                     "getTimeSeries" : {
                       "key" : "ph2"
@@ -7873,6 +7878,7 @@
                     },
                     "dataToValue" : {
                       "type" : "NONE",
+                      "compareToValue" : true,
                       "dataToValueFunction" : "/* Should return boolean value */\nreturn data;"
                     }
                   },
@@ -7886,8 +7892,8 @@
                       "persistentPollingInterval" : 1000
                     },
                     "getAttribute" : {
-                      "scope" : "SERVER_SCOPE",
-                      "key" : "ph_limits"
+                      "key" : "ph_limits",
+                      "scope" : "SERVER_SCOPE"
                     },
                     "getTimeSeries" : {
                       "key" : "state"
@@ -7898,6 +7904,7 @@
                     },
                     "dataToValue" : {
                       "type" : "FUNCTION",
+                      "compareToValue" : true,
                       "dataToValueFunction" : "return data.ph2.max;"
                     }
                   },
@@ -7911,8 +7918,8 @@
                       "persistentPollingInterval" : 1000
                     },
                     "getAttribute" : {
-                      "scope" : "SERVER_SCOPE",
-                      "key" : "ph_limits"
+                      "key" : "ph_limits",
+                      "scope" : "SERVER_SCOPE"
                     },
                     "getTimeSeries" : {
                       "key" : "state"
@@ -7923,6 +7930,7 @@
                     },
                     "dataToValue" : {
                       "type" : "FUNCTION",
+                      "compareToValue" : true,
                       "dataToValueFunction" : "return data.ph2.max;"
                     }
                   },
@@ -7936,8 +7944,8 @@
                       "persistentPollingInterval" : 1000
                     },
                     "getAttribute" : {
-                      "scope" : "SERVER_SCOPE",
-                      "key" : "ph_limits"
+                      "key" : "ph_limits",
+                      "scope" : "SERVER_SCOPE"
                     },
                     "getTimeSeries" : {
                       "key" : "state"
@@ -7948,6 +7956,7 @@
                     },
                     "dataToValue" : {
                       "type" : "FUNCTION",
+                      "compareToValue" : true,
                       "dataToValueFunction" : "return data.ph2.min;"
                     }
                   },
@@ -7961,8 +7970,8 @@
                       "persistentPollingInterval" : 1000
                     },
                     "getAttribute" : {
-                      "scope" : "SERVER_SCOPE",
-                      "key" : "ph_limits"
+                      "key" : "ph_limits",
+                      "scope" : "SERVER_SCOPE"
                     },
                     "getTimeSeries" : {
                       "key" : "state"
@@ -7973,6 +7982,7 @@
                     },
                     "dataToValue" : {
                       "type" : "FUNCTION",
+                      "compareToValue" : true,
                       "dataToValueFunction" : "return data.ph2.min;"
                     }
                   },
@@ -8012,10 +8022,10 @@
                 },
                 "properties" : {
                   "minMaxValue" : true,
-                  "minValue" : 60,
-                  "maxValue" : 80,
+                  "minValue" : 5,
+                  "maxValue" : 9,
                   "value" : true,
-                  "valueDecimals" : 0,
+                  "valueDecimals" : 2,
                   "valueFont" : {
                     "size" : 60,
                     "sizeUnit" : "px",
