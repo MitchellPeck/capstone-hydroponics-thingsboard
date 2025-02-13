@@ -84,6 +84,10 @@
       "toIndex" : 9,
       "type" : "Success"
     }, {
+      "fromIndex" : 8,
+      "toIndex" : 84,
+      "type" : "Success"
+    }, {
       "fromIndex" : 9,
       "toIndex" : 11,
       "type" : "True"
@@ -406,6 +410,10 @@
     }, {
       "fromIndex" : 82,
       "toIndex" : 83,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 84,
+      "toIndex" : 85,
       "type" : "Success"
     } ],
     "firstNodeIndex" : 6,
@@ -2945,6 +2953,54 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.telemetry.TbMsgAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2132,
+        "layoutY" : 148
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "t1 = msg.temperature1;\nt2 = msg.temperature2;\n\nvar t1cal = JSON.parse(metadata.ss_calibration).temperature.temperature1;\nvar t2cal = JSON.parse(metadata.ss_calibration).temperature.temperature2;\n\nt1 += t1cal.offset;\nt1 *= t1cal.factor;\nt2 += t2cal.offset;\nt2 *= t2cal.factor;\n\nreturn {msg: {temperature1: t1, temperature2: t2}, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "032ac750-ea16-11ef-9b0c-51890bf6195a"
+      },
+      "name" : "set temperature attributes",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2407,
+        "layoutY" : 149
+      },
+      "configuration" : {
+        "defaultTTL" : 0,
+        "skipLatestPersistence" : false,
+        "useServerTs" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "032dd490-ea16-11ef-9b0c-51890bf6195a"
+      },
+      "name" : "save temperature attributes",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
     } ],
     "ruleChainConnections" : null
   },
