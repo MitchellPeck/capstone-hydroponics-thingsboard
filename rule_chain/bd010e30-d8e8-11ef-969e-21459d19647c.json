@@ -510,7 +510,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "return msg.temperature > 20;",
-        "tbelScript" : "var v = msg.temperature1;\nvar calibration = JSON.parse(metadata.ss_calibration).temperature.temperature1;\nv += calibration.offset;\nv *= calibration.factor;\n\nvar lims = JSON.parse(metadata.ss_temperature_limits).temperature1;\nvar max = lims.max;\nvar min = lims.min;\n\nreturn v >= max || v <= min;"
+        "tbelScript" : "var v = msg.temperature1;\n\nvar lims = JSON.parse(metadata.ss_temperature_limits).temperature1;\nvar max = lims.max;\nvar min = lims.min;\n\nreturn v >= max || v <= min;"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -536,7 +536,7 @@
         "fetchTo" : "METADATA",
         "clientAttributeNames" : [ ],
         "sharedAttributeNames" : [ ],
-        "serverAttributeNames" : [ "temperature_limits", "calibration" ],
+        "serverAttributeNames" : [ "temperature_limits" ],
         "latestTsKeyNames" : [ ],
         "getLatestValueWithTs" : false
       },
@@ -562,7 +562,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "return msg.temperature > 20;",
-        "tbelScript" : "var v = msg.temperature2;\nvar calibration = JSON.parse(metadata.ss_calibration).temperature.temperature2;\nv += calibration.offset;\nv *= calibration.factor;\n\nvar lims = JSON.parse(metadata.ss_temperature_limits).temperature2;\nvar max = lims.max;\nvar min = lims.min;\n\nreturn v >= max || v <= min;"
+        "tbelScript" : "var v = msg.temperature2;\n\nvar lims = JSON.parse(metadata.ss_temperature_limits).temperature2;\nvar max = lims.max;\nvar min = lims.min;\n\nreturn v >= max || v <= min;"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -1668,7 +1668,7 @@
         "fetchTo" : "METADATA",
         "clientAttributeNames" : [ ],
         "sharedAttributeNames" : [ ],
-        "serverAttributeNames" : [ "ph_limits", "calibration" ],
+        "serverAttributeNames" : [ "ph_limits" ],
         "latestTsKeyNames" : [ ],
         "getLatestValueWithTs" : false
       },
@@ -1700,7 +1700,7 @@
         "fetchTo" : "METADATA",
         "clientAttributeNames" : [ ],
         "sharedAttributeNames" : [ ],
-        "serverAttributeNames" : [ "tds_limits", "calibration" ],
+        "serverAttributeNames" : [ "tds_limits" ],
         "latestTsKeyNames" : [ ],
         "getLatestValueWithTs" : false
       },
@@ -1730,7 +1730,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "var v = msg.ph1;\nvar calibration = JSON.parse(metadata.ss_calibration).ph.ph1;\nv += calibration.offset;\nv *= calibration.factor;\n\nvar lims = JSON.parse(metadata.ss_ph_limits).ph1;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max) {\n    return ['max']\n} else if (v <= min) {\n    return ['min']\n} else return []"
+        "tbelScript" : "var v = msg.ph1;\n\nvar lims = JSON.parse(metadata.ss_ph_limits).ph1;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max) {\n    return ['max']\n} else if (v <= min) {\n    return ['min']\n} else return []"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -1832,7 +1832,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "var v = msg.tds;\nvar calibration = JSON.parse(metadata.ss_calibration).tds;\nv += calibration.offset;\nv *= calibration.factor;\n\nvar lims = JSON.parse(metadata.ss_tds_limits);\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max) {\n    return ['max']\n} else if (v <= min) {\n    return ['min']\n} else return []"
+        "tbelScript" : "var v = msg.tds;\n\nvar lims = JSON.parse(metadata.ss_tds_limits);\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max) {\n    return ['max']\n} else if (v <= min) {\n    return ['min']\n} else return []"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -2472,7 +2472,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "t1 = msg.temperature1;\nt2 = msg.temperature2;\n\nvar t1cal = JSON.parse(metadata.ss_calibration).temperature.temperature1;\nvar t2cal = JSON.parse(metadata.ss_calibration).temperature.temperature2;\n\nt1 += t1cal.offset;\nt1 *= t1cal.factor;\nt2 += t2cal.offset;\nt2 *= t2cal.factor;\n\nmsg.temperature1 = t1;\nmsg.temperature2 = t2;\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+        "tbelScript" : "t1 = msg.temperature1;\nt2 = msg.temperature2;\nph = msg.ph;\ntds = msg.tds;\n\nvar t1cal = JSON.parse(metadata.ss_calibration).temperature.temperature1;\nvar t2cal = JSON.parse(metadata.ss_calibration).temperature.temperature2;\nvar phCal = JSON.parse(metadata.ss_calibration).ph.ph1;\nvar tdsCal = JSON.parse(metadata.ss_calibration).tds;\n\nt1 += t1cal.offset;\nt1 *= t1cal.factor;\nt2 += t2cal.offset;\nt2 *= t2cal.factor;\n\nph += phCal.offset;\nph *= phCal.factor;\n\ntds += tdsCal.offset;\ntds *= tdsCal.factor;\n\nmsg.temperature1 = t1;\nmsg.temperature2 = t2;\nmsg.ph = ph;\nmsg.tds = tds;\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
