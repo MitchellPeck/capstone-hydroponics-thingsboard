@@ -61,7 +61,7 @@
       "type" : "RPC Request to Device"
     }, {
       "fromIndex" : 2,
-      "toIndex" : 67,
+      "toIndex" : 68,
       "type" : "Post telemetry"
     }, {
       "fromIndex" : 6,
@@ -326,6 +326,10 @@
     }, {
       "fromIndex" : 67,
       "toIndex" : 0,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 68,
+      "toIndex" : 67,
       "type" : "Success"
     } ],
     "firstNodeIndex" : 6,
@@ -2316,8 +2320,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 825,
-        "layoutY" : 145
+        "layoutX" : 904,
+        "layoutY" : 146
       },
       "configuration" : {
         "scriptLang" : "TBEL",
@@ -2337,6 +2341,38 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 651,
+        "layoutY" : 148
+      },
+      "configuration" : {
+        "tellFailureIfAbsent" : true,
+        "fetchTo" : "METADATA",
+        "clientAttributeNames" : [ ],
+        "sharedAttributeNames" : [ ],
+        "serverAttributeNames" : [ "calibration" ],
+        "latestTsKeyNames" : [ ],
+        "getLatestValueWithTs" : false
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f4a20100-f602-11ef-8eae-7336bcb35984"
+      },
+      "name" : "get calibration",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetAttributesNode"
     } ],
     "ruleChainConnections" : null
   },
