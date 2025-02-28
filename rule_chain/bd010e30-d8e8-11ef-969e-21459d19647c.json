@@ -41,11 +41,7 @@
       "type" : "Success"
     }, {
       "fromIndex" : 0,
-      "toIndex" : 45,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 0,
-      "toIndex" : 52,
+      "toIndex" : 48,
       "type" : "Success"
     }, {
       "fromIndex" : 2,
@@ -65,7 +61,7 @@
       "type" : "RPC Request to Device"
     }, {
       "fromIndex" : 2,
-      "toIndex" : 71,
+      "toIndex" : 67,
       "type" : "Post telemetry"
     }, {
       "fromIndex" : 6,
@@ -233,114 +229,102 @@
       "type" : "Success"
     }, {
       "fromIndex" : 44,
-      "toIndex" : 46,
+      "toIndex" : 45,
       "type" : "Success"
     }, {
       "fromIndex" : 45,
+      "toIndex" : 46,
+      "type" : "max"
+    }, {
+      "fromIndex" : 45,
+      "toIndex" : 47,
+      "type" : "min"
+    }, {
+      "fromIndex" : 48,
       "toIndex" : 49,
       "type" : "Success"
     }, {
-      "fromIndex" : 46,
-      "toIndex" : 47,
-      "type" : "max"
-    }, {
-      "fromIndex" : 46,
-      "toIndex" : 48,
-      "type" : "min"
-    }, {
-      "fromIndex" : 49,
-      "toIndex" : 50,
-      "type" : "max"
-    }, {
-      "fromIndex" : 49,
-      "toIndex" : 51,
-      "type" : "min"
-    }, {
-      "fromIndex" : 52,
-      "toIndex" : 53,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 52,
-      "toIndex" : 59,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 52,
-      "toIndex" : 65,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 53,
-      "toIndex" : 56,
-      "type" : "on"
-    }, {
-      "fromIndex" : 53,
-      "toIndex" : 57,
-      "type" : "off"
-    }, {
-      "fromIndex" : 53,
-      "toIndex" : 60,
-      "type" : "update"
-    }, {
-      "fromIndex" : 54,
-      "toIndex" : 61,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 56,
-      "toIndex" : 58,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 57,
-      "toIndex" : 58,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 59,
-      "toIndex" : 54,
-      "type" : "update"
-    }, {
-      "fromIndex" : 59,
-      "toIndex" : 62,
-      "type" : "on"
-    }, {
-      "fromIndex" : 59,
-      "toIndex" : 63,
-      "type" : "off"
-    }, {
-      "fromIndex" : 60,
+      "fromIndex" : 48,
       "toIndex" : 55,
       "type" : "Success"
     }, {
-      "fromIndex" : 62,
-      "toIndex" : 64,
+      "fromIndex" : 48,
+      "toIndex" : 61,
       "type" : "Success"
     }, {
-      "fromIndex" : 63,
+      "fromIndex" : 49,
+      "toIndex" : 52,
+      "type" : "on"
+    }, {
+      "fromIndex" : 49,
+      "toIndex" : 53,
+      "type" : "off"
+    }, {
+      "fromIndex" : 49,
+      "toIndex" : 56,
+      "type" : "update"
+    }, {
+      "fromIndex" : 50,
+      "toIndex" : 57,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 52,
+      "toIndex" : 54,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 53,
+      "toIndex" : 54,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 55,
+      "toIndex" : 50,
+      "type" : "update"
+    }, {
+      "fromIndex" : 55,
+      "toIndex" : 58,
+      "type" : "on"
+    }, {
+      "fromIndex" : 55,
+      "toIndex" : 59,
+      "type" : "off"
+    }, {
+      "fromIndex" : 56,
+      "toIndex" : 51,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 58,
+      "toIndex" : 60,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 59,
+      "toIndex" : 60,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 61,
+      "toIndex" : 62,
+      "type" : "update"
+    }, {
+      "fromIndex" : 61,
       "toIndex" : 64,
+      "type" : "on"
+    }, {
+      "fromIndex" : 61,
+      "toIndex" : 65,
+      "type" : "off"
+    }, {
+      "fromIndex" : 62,
+      "toIndex" : 63,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 64,
+      "toIndex" : 66,
       "type" : "Success"
     }, {
       "fromIndex" : 65,
       "toIndex" : 66,
-      "type" : "update"
-    }, {
-      "fromIndex" : 65,
-      "toIndex" : 68,
-      "type" : "on"
-    }, {
-      "fromIndex" : 65,
-      "toIndex" : 69,
-      "type" : "off"
-    }, {
-      "fromIndex" : 66,
-      "toIndex" : 67,
       "type" : "Success"
     }, {
-      "fromIndex" : 68,
-      "toIndex" : 70,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 69,
-      "toIndex" : 70,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 71,
+      "fromIndex" : 67,
       "toIndex" : 0,
       "type" : "Success"
     } ],
@@ -1661,38 +1645,6 @@
       "additionalInfo" : {
         "description" : "",
         "layoutX" : 1443,
-        "layoutY" : 2647
-      },
-      "configuration" : {
-        "tellFailureIfAbsent" : true,
-        "fetchTo" : "METADATA",
-        "clientAttributeNames" : [ ],
-        "sharedAttributeNames" : [ ],
-        "serverAttributeNames" : [ "ph_limits" ],
-        "latestTsKeyNames" : [ ],
-        "getLatestValueWithTs" : false
-      },
-      "configurationVersion" : 1,
-      "createdTime" : 0,
-      "debugSettings" : {
-        "allEnabled" : false,
-        "allEnabledUntil" : 0,
-        "failuresEnabled" : false
-      },
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "bee67520-d99a-11ef-969e-21459d19647c"
-      },
-      "name" : "get ph limits",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.metadata.TbGetAttributesNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1443,
         "layoutY" : 2892
       },
       "configuration" : {
@@ -1721,108 +1673,6 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.metadata.TbGetAttributesNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1690,
-        "layoutY" : 2567
-      },
-      "configuration" : {
-        "scriptLang" : "TBEL",
-        "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "var v = msg.ph1;\n\nvar lims = JSON.parse(metadata.ss_ph_limits).ph1;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max) {\n    return ['max']\n} else if (v <= min) {\n    return ['min']\n} else return []"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugSettings" : {
-        "allEnabled" : false,
-        "allEnabledUntil" : 0,
-        "failuresEnabled" : false
-      },
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "bee6ea50-d99a-11ef-969e-21459d19647c"
-      },
-      "name" : "ph1 check",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.filter.TbJsSwitchNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1945,
-        "layoutY" : 2528
-      },
-      "configuration" : {
-        "scriptLang" : "TBEL",
-        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
-        "alarmDetailsBuildTbel" : "var details = {};\nif (metadata.prevAlarmDetails != null) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    metadata.remove('prevAlarmDetails');\n    //now metadata is the same as it comes IN this rule node\n}\n\nreturn details;",
-        "useMessageAlarmData" : false,
-        "overwriteAlarmDetails" : false,
-        "alarmType" : "pH 1 Max Alarm",
-        "severity" : "MAJOR",
-        "propagate" : false,
-        "relationTypes" : [ ],
-        "propagateToOwner" : false,
-        "propagateToTenant" : false,
-        "dynamicSeverity" : false
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugSettings" : {
-        "allEnabled" : false,
-        "allEnabledUntil" : 0,
-        "failuresEnabled" : false
-      },
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "bee73870-d99a-11ef-969e-21459d19647c"
-      },
-      "name" : "ph1 max alarm",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1944,
-        "layoutY" : 2608
-      },
-      "configuration" : {
-        "scriptLang" : "TBEL",
-        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
-        "alarmDetailsBuildTbel" : "var details = {};\nif (metadata.prevAlarmDetails != null) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    metadata.remove('prevAlarmDetails');\n    //now metadata is the same as it comes IN this rule node\n}\n\nreturn details;",
-        "useMessageAlarmData" : false,
-        "overwriteAlarmDetails" : false,
-        "alarmType" : "pH 1 Min Alarm",
-        "severity" : "MAJOR",
-        "propagate" : false,
-        "relationTypes" : [ ],
-        "propagateToOwner" : false,
-        "propagateToTenant" : false,
-        "dynamicSeverity" : false
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugSettings" : {
-        "allEnabled" : false,
-        "allEnabledUntil" : 0,
-        "failuresEnabled" : false
-      },
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "bee78690-d99a-11ef-969e-21459d19647c"
-      },
-      "name" : "ph1 min alarm",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
     }, {
       "additionalInfo" : {
         "description" : "",
@@ -2472,7 +2322,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "t1 = msg.temperature1;\nt2 = msg.temperature2;\nph = msg.ph;\ntds = msg.tds;\n\nvar t1cal = JSON.parse(metadata.ss_calibration).temperature.temperature1;\nvar t2cal = JSON.parse(metadata.ss_calibration).temperature.temperature2;\nvar phCal = JSON.parse(metadata.ss_calibration).ph.ph1;\nvar tdsCal = JSON.parse(metadata.ss_calibration).tds;\n\nt1 += t1cal.offset;\nt1 *= t1cal.factor;\nt2 += t2cal.offset;\nt2 *= t2cal.factor;\n\nph += phCal.offset;\nph *= phCal.factor;\n\ntds += tdsCal.offset;\ntds *= tdsCal.factor;\n\nmsg.temperature1 = t1;\nmsg.temperature2 = t2;\nmsg.ph = ph;\nmsg.tds = tds;\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+        "tbelScript" : "t1 = msg.temperature1;\nt2 = msg.temperature2;\ntds = msg.tds;\n\nvar t1cal = JSON.parse(metadata.ss_calibration).temperature.temperature1;\nvar t2cal = JSON.parse(metadata.ss_calibration).temperature.temperature2;\nvar tdsCal = JSON.parse(metadata.ss_calibration).tds;\n\nt1 += t1cal.offset;\nt1 *= t1cal.factor;\nt2 += t2cal.offset;\nt2 *= t2cal.factor;\n\nph += phCal.offset;\nph *= phCal.factor;\n\ntds += tdsCal.offset;\ntds *= tdsCal.factor;\n\nmsg.temperature1 = t1;\nmsg.temperature2 = t2;\nmsg.ph = ph;\nmsg.tds = tds;\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
