@@ -1423,7 +1423,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "return {msg: {light1: true}, metadata: metadata, msgType: \"POST_ATTRIBUTES_REQUEST\"};"
+        "tbelScript" : "return {msg: {light1: 1}, metadata: metadata, msgType: \"POST_ATTRIBUTES_REQUEST\"};"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -1451,7 +1451,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "return {msg: {light1: false}, metadata: metadata, msgType: \"POST_ATTRIBUTES_REQUEST\"};"
+        "tbelScript" : "return {msg: {light1: 0}, metadata: metadata, msgType: \"POST_ATTRIBUTES_REQUEST\"};"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -1610,7 +1610,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "return {msg: {light2: true}, metadata: metadata, msgType: \"POST_ATTRIBUTES_REQUEST\"};"
+        "tbelScript" : "return {msg: {light2: 1}, metadata: metadata, msgType: \"POST_ATTRIBUTES_REQUEST\"};"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -1638,7 +1638,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "return {msg: {light2: false}, metadata: metadata, msgType: \"POST_ATTRIBUTES_REQUEST\"};"
+        "tbelScript" : "return {msg: {light2: 0}, metadata: metadata, msgType: \"POST_ATTRIBUTES_REQUEST\"};"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
