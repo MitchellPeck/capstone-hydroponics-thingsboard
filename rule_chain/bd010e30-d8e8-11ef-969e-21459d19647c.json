@@ -2326,7 +2326,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "t1 = msg.temperature1;\nt2 = msg.temperature2;\ntds = msg.tds;\n\nvar t1cal = JSON.parse(metadata.ss_calibration).temperature.temperature1;\nvar t2cal = JSON.parse(metadata.ss_calibration).temperature.temperature2;\nvar tdsCal = JSON.parse(metadata.ss_calibration).tds;\n\nt1 += t1cal.offset;\nt1 *= t1cal.factor;\nt2 += t2cal.offset;\nt2 *= t2cal.factor;\n\nph += phCal.offset;\nph *= phCal.factor;\n\ntds += tdsCal.offset;\ntds *= tdsCal.factor;\n\nmsg.temperature1 = t1;\nmsg.temperature2 = t2;\nmsg.ph = ph;\nmsg.tds = tds;\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+        "tbelScript" : "t1 = msg.temperature1;\nt2 = msg.temperature2;\ntds = msg.tds;\n\nvar t1cal = JSON.parse(metadata.ss_calibration).temperature.temperature1;\nvar t2cal = JSON.parse(metadata.ss_calibration).temperature.temperature2;\nvar tdsCal = JSON.parse(metadata.ss_calibration).tds;\n\nt1 += t1cal.offset;\nt1 *= t1cal.factor;\nt2 += t2cal.offset;\nt2 *= t2cal.factor;\n\ntds += tdsCal.offset;\ntds *= tdsCal.factor;\n\nmsg.temperature1 = t1;\nmsg.temperature2 = t2;\nmsg.tds = tds;\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
