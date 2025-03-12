@@ -8549,7 +8549,7 @@
                 "valueToData" : {
                   "type" : "FUNCTION",
                   "constantValue" : 0,
-                  "valueToDataFunction" : "/* Convert input integer value to RPC parameters or attribute/time-series value */\nreturn value/100;"
+                  "valueToDataFunction" : "/* Convert input integer value to RPC parameters or attribute/time-series value */\nreturn value;"
                 }
               },
               "disabledState" : {
