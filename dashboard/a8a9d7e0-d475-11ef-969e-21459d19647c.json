@@ -8528,7 +8528,7 @@
                 },
                 "dataToValue" : {
                   "type" : "FUNCTION",
-                  "dataToValueFunction" : "/* Should return integer value */\nreturn data*100;"
+                  "dataToValueFunction" : "/* Should return integer value */\nreturn data*100/255;"
                 }
               },
               "valueChange" : {
@@ -8549,7 +8549,7 @@
                 "valueToData" : {
                   "type" : "FUNCTION",
                   "constantValue" : 0,
-                  "valueToDataFunction" : "/* Convert input integer value to RPC parameters or attribute/time-series value */\nreturn value/100.0;"
+                  "valueToDataFunction" : "/* Convert input integer value to RPC parameters or attribute/time-series value */\nreturn value/100.0*255;"
                 }
               },
               "disabledState" : {
@@ -8704,7 +8704,7 @@
                 },
                 "dataToValue" : {
                   "type" : "FUNCTION",
-                  "dataToValueFunction" : "/* Should return integer value */\nreturn data*100;"
+                  "dataToValueFunction" : "/* Should return integer value */\nreturn data*100/255;"
                 }
               },
               "valueChange" : {
@@ -8725,7 +8725,7 @@
                 "valueToData" : {
                   "type" : "FUNCTION",
                   "constantValue" : 0,
-                  "valueToDataFunction" : "/* Convert input integer value to RPC parameters or attribute/time-series value */\nreturn value/100;"
+                  "valueToDataFunction" : "/* Convert input integer value to RPC parameters or attribute/time-series value */\nreturn value/100.0*255;"
                 }
               },
               "disabledState" : {
@@ -8880,7 +8880,7 @@
                 },
                 "dataToValue" : {
                   "type" : "FUNCTION",
-                  "dataToValueFunction" : "/* Should return integer value */\nreturn data*100;"
+                  "dataToValueFunction" : "/* Should return integer value */\nreturn data*100/255;"
                 }
               },
               "valueChange" : {
@@ -8901,7 +8901,7 @@
                 "valueToData" : {
                   "type" : "FUNCTION",
                   "constantValue" : 0,
-                  "valueToDataFunction" : "/* Convert input integer value to RPC parameters or attribute/time-series value */\nreturn value/100;"
+                  "valueToDataFunction" : "/* Convert input integer value to RPC parameters or attribute/time-series value */\nreturn value/100.0*255;"
                 }
               },
               "disabledState" : {
@@ -9056,7 +9056,7 @@
                 },
                 "dataToValue" : {
                   "type" : "FUNCTION",
-                  "dataToValueFunction" : "/* Should return integer value */\nreturn data*100;"
+                  "dataToValueFunction" : "/* Should return integer value */\nreturn data*100/255;"
                 }
               },
               "valueChange" : {
@@ -9077,7 +9077,7 @@
                 "valueToData" : {
                   "type" : "FUNCTION",
                   "constantValue" : 0,
-                  "valueToDataFunction" : "/* Convert input integer value to RPC parameters or attribute/time-series value */\nreturn value/100;"
+                  "valueToDataFunction" : "/* Convert input integer value to RPC parameters or attribute/time-series value */\nreturn value/100.0*255;"
                 }
               },
               "disabledState" : {
