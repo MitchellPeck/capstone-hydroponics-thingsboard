@@ -1411,7 +1411,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "return {msg: {light1: 1, light2: 1}, metadata: metadata, msgType: \"POST_ATTRIBUTES_REQUEST\"};"
+        "tbelScript" : "return {msg: {light1: msg.light1+10}, metadata: metadata, msgType: \"POST_ATTRIBUTES_REQUEST\"};"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -1425,7 +1425,7 @@
         "entityType" : "RULE_NODE",
         "id" : "bee19320-d99a-11ef-969e-21459d19647c"
       },
-      "name" : "light 1-2 on",
+      "name" : "light 1 on",
       "queueName" : null,
       "ruleChainId" : null,
       "singletonMode" : false,
