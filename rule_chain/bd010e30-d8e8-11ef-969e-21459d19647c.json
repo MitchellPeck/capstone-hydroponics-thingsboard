@@ -1598,7 +1598,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "return {msg: {light2: Math.min(metadata.shared_light2-10, 255)}, metadata: metadata, msgType: \"POST_ATTRIBUTES_REQUEST\"};"
+        "tbelScript" : "return {msg: {light2: Math.min(metadata.shared_light2+10, 255)}, metadata: metadata, msgType: \"POST_ATTRIBUTES_REQUEST\"};"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
