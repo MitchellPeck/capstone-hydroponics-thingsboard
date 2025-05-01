@@ -6374,7 +6374,7 @@
               "fontSize" : "16px",
               "fontWeight" : 400
             },
-            "units" : "lx",
+            "units" : null,
             "decimals" : 0,
             "useDashboardTimewindow" : true,
             "widgetStyle" : { },
@@ -6536,7 +6536,7 @@
               "fontSize" : "16px",
               "fontWeight" : 400
             },
-            "units" : "in",
+            "units" : null,
             "decimals" : 1,
             "useDashboardTimewindow" : true,
             "widgetStyle" : { },
@@ -6698,7 +6698,7 @@
               "fontSize" : "16px",
               "fontWeight" : 400
             },
-            "units" : "lx",
+            "units" : null,
             "decimals" : 0,
             "useDashboardTimewindow" : true,
             "widgetStyle" : { },
@@ -6860,7 +6860,7 @@
               "fontSize" : "16px",
               "fontWeight" : 400
             },
-            "units" : "in",
+            "units" : null,
             "decimals" : 1,
             "useDashboardTimewindow" : true,
             "widgetStyle" : { },
@@ -7022,7 +7022,7 @@
               "fontSize" : "16px",
               "fontWeight" : 400
             },
-            "units" : "in",
+            "units" : null,
             "decimals" : 1,
             "useDashboardTimewindow" : true,
             "widgetStyle" : { },
@@ -7184,7 +7184,7 @@
               "fontSize" : "16px",
               "fontWeight" : 400
             },
-            "units" : "in",
+            "units" : null,
             "decimals" : 1,
             "useDashboardTimewindow" : true,
             "widgetStyle" : { },
@@ -9345,7 +9345,14 @@
     },
     "name" : "System Control",
     "resources" : null,
-    "assignedCustomers" : null,
+    "assignedCustomers" : [ {
+      "customerId" : {
+        "entityType" : "CUSTOMER",
+        "id" : "b5f933b0-21f4-11f0-aba0-5d3a43c98613"
+      },
+      "title" : "MBCA",
+      "public" : false
+    } ],
     "externalId" : null,
     "id" : {
       "entityType" : "DASHBOARD",
