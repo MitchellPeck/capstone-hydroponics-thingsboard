@@ -278,8 +278,8 @@
                       "persistentPollingInterval" : 1000
                     },
                     "getAttribute" : {
-                      "key" : "pump2",
-                      "scope" : "SHARED_SCOPE"
+                      "scope" : "SHARED_SCOPE",
+                      "key" : "pump2"
                     },
                     "getTimeSeries" : {
                       "key" : "state"
@@ -289,9 +289,9 @@
                       "typeList" : null
                     },
                     "dataToValue" : {
-                      "type" : "NONE",
-                      "compareToValue" : true,
-                      "dataToValueFunction" : "/* Should return boolean value */\nreturn data;"
+                      "type" : "FUNCTION",
+                      "dataToValueFunction" : "/* Should return boolean value */\nreturn !data;",
+                      "compareToValue" : true
                     }
                   },
                   "warning" : {
@@ -304,8 +304,8 @@
                       "persistentPollingInterval" : 1000
                     },
                     "getAttribute" : {
-                      "scope" : null,
-                      "key" : "state"
+                      "key" : "state",
+                      "scope" : null
                     },
                     "getTimeSeries" : {
                       "key" : "state"
@@ -316,8 +316,8 @@
                     },
                     "dataToValue" : {
                       "type" : "NONE",
-                      "dataToValueFunction" : "/* Should return boolean value */\nreturn data;",
-                      "compareToValue" : true
+                      "compareToValue" : true,
+                      "dataToValueFunction" : "/* Should return boolean value */\nreturn data;"
                     }
                   },
                   "warningClick" : {
@@ -725,8 +725,8 @@
                       "persistentPollingInterval" : 1000
                     },
                     "getAttribute" : {
-                      "key" : "pump1",
-                      "scope" : "SHARED_SCOPE"
+                      "scope" : "SHARED_SCOPE",
+                      "key" : "pump1"
                     },
                     "getTimeSeries" : {
                       "key" : "state"
@@ -736,9 +736,9 @@
                       "typeList" : null
                     },
                     "dataToValue" : {
-                      "type" : "NONE",
-                      "compareToValue" : true,
-                      "dataToValueFunction" : "/* Should return boolean value */\nreturn data;"
+                      "type" : "FUNCTION",
+                      "dataToValueFunction" : "/* Should return boolean value */\nreturn !data;",
+                      "compareToValue" : true
                     }
                   },
                   "warning" : {
@@ -751,8 +751,8 @@
                       "persistentPollingInterval" : 1000
                     },
                     "getAttribute" : {
-                      "scope" : null,
-                      "key" : "state"
+                      "key" : "state",
+                      "scope" : null
                     },
                     "getTimeSeries" : {
                       "key" : "state"
@@ -763,8 +763,8 @@
                     },
                     "dataToValue" : {
                       "type" : "NONE",
-                      "dataToValueFunction" : "/* Should return boolean value */\nreturn data;",
-                      "compareToValue" : true
+                      "compareToValue" : true,
+                      "dataToValueFunction" : "/* Should return boolean value */\nreturn data;"
                     }
                   },
                   "warningClick" : {
@@ -784,8 +784,8 @@
                       "persistentPollingInterval" : 1000
                     },
                     "getAttribute" : {
-                      "scope" : null,
-                      "key" : "state"
+                      "key" : "state",
+                      "scope" : null
                     },
                     "getTimeSeries" : {
                       "key" : "state"
@@ -796,8 +796,8 @@
                     },
                     "dataToValue" : {
                       "type" : "NONE",
-                      "dataToValueFunction" : "/* Should return boolean value */\nreturn data;",
-                      "compareToValue" : true
+                      "compareToValue" : true,
+                      "dataToValueFunction" : "/* Should return boolean value */\nreturn data;"
                     }
                   },
                   "criticalClick" : {
@@ -7631,8 +7631,8 @@
                   "typeList" : null
                 },
                 "dataToValue" : {
-                  "type" : "NONE",
-                  "dataToValueFunction" : "/* Should return boolean value */\nreturn data;",
+                  "type" : "FUNCTION",
+                  "dataToValueFunction" : "/* Should return boolean value */\nreturn 1data;",
                   "compareToValue" : true
                 }
               },
@@ -7653,7 +7653,7 @@
                 },
                 "valueToData" : {
                   "type" : "CONSTANT",
-                  "constantValue" : true,
+                  "constantValue" : false,
                   "valueToDataFunction" : "/* Convert input boolean value to RPC parameters or attribute/time-series value */\nreturn value;"
                 }
               },
@@ -7674,7 +7674,7 @@
                 },
                 "valueToData" : {
                   "type" : "CONSTANT",
-                  "constantValue" : false,
+                  "constantValue" : true,
                   "valueToDataFunction" : "/* Convert input boolean value to RPC parameters or attribute/time-series value */ \n return value;"
                 }
               },
@@ -7833,8 +7833,8 @@
                   "typeList" : null
                 },
                 "dataToValue" : {
-                  "type" : "NONE",
-                  "dataToValueFunction" : "/* Should return boolean value */\nreturn data;",
+                  "type" : "FUNCTION",
+                  "dataToValueFunction" : "/* Should return boolean value */\nreturn !data;",
                   "compareToValue" : true
                 }
               },
@@ -7855,7 +7855,7 @@
                 },
                 "valueToData" : {
                   "type" : "CONSTANT",
-                  "constantValue" : true,
+                  "constantValue" : false,
                   "valueToDataFunction" : "/* Convert input boolean value to RPC parameters or attribute/time-series value */\nreturn value;"
                 }
               },
@@ -7876,7 +7876,7 @@
                 },
                 "valueToData" : {
                   "type" : "CONSTANT",
-                  "constantValue" : false,
+                  "constantValue" : true,
                   "valueToDataFunction" : "/* Convert input boolean value to RPC parameters or attribute/time-series value */ \n return value;"
                 }
               },
