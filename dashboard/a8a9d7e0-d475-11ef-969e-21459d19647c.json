@@ -7632,8 +7632,8 @@
                 },
                 "dataToValue" : {
                   "type" : "FUNCTION",
-                  "dataToValueFunction" : "/* Should return boolean value */\nreturn 1data;",
-                  "compareToValue" : true
+                  "dataToValueFunction" : "/* Should return boolean value */\nreturn data;",
+                  "compareToValue" : false
                 }
               },
               "onUpdateState" : {
@@ -7834,8 +7834,8 @@
                 },
                 "dataToValue" : {
                   "type" : "FUNCTION",
-                  "dataToValueFunction" : "/* Should return boolean value */\nreturn !data;",
-                  "compareToValue" : true
+                  "dataToValueFunction" : "/* Should return boolean value */\nreturn data;",
+                  "compareToValue" : false
                 }
               },
               "onUpdateState" : {
