@@ -7633,7 +7633,7 @@
                 "dataToValue" : {
                   "type" : "FUNCTION",
                   "dataToValueFunction" : "/* Should return boolean value */\nreturn data;",
-                  "compareToValue" : false
+                  "compareToValue" : true
                 }
               },
               "onUpdateState" : {
@@ -7653,7 +7653,7 @@
                 },
                 "valueToData" : {
                   "type" : "CONSTANT",
-                  "constantValue" : false,
+                  "constantValue" : true,
                   "valueToDataFunction" : "/* Convert input boolean value to RPC parameters or attribute/time-series value */\nreturn value;"
                 }
               },
@@ -7674,7 +7674,7 @@
                 },
                 "valueToData" : {
                   "type" : "CONSTANT",
-                  "constantValue" : true,
+                  "constantValue" : false,
                   "valueToDataFunction" : "/* Convert input boolean value to RPC parameters or attribute/time-series value */ \n return value;"
                 }
               },
@@ -7835,7 +7835,7 @@
                 "dataToValue" : {
                   "type" : "FUNCTION",
                   "dataToValueFunction" : "/* Should return boolean value */\nreturn data;",
-                  "compareToValue" : false
+                  "compareToValue" : true
                 }
               },
               "onUpdateState" : {
@@ -7855,7 +7855,7 @@
                 },
                 "valueToData" : {
                   "type" : "CONSTANT",
-                  "constantValue" : false,
+                  "constantValue" : true,
                   "valueToDataFunction" : "/* Convert input boolean value to RPC parameters or attribute/time-series value */\nreturn value;"
                 }
               },
@@ -7876,7 +7876,7 @@
                 },
                 "valueToData" : {
                   "type" : "CONSTANT",
-                  "constantValue" : true,
+                  "constantValue" : false,
                   "valueToDataFunction" : "/* Convert input boolean value to RPC parameters or attribute/time-series value */ \n return value;"
                 }
               },
