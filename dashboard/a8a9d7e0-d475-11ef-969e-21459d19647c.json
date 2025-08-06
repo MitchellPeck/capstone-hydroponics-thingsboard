@@ -9162,7 +9162,7 @@
                   "sizeY" : 2,
                   "preserveAspectRatio" : false,
                   "resizable" : true,
-                  "row" : 6,
+                  "row" : 11,
                   "col" : 0
                 },
                 "aa911eb0-3d00-3929-ecf9-7c678556aa35" : {
@@ -9178,7 +9178,7 @@
                   "sizeY" : 2,
                   "preserveAspectRatio" : false,
                   "resizable" : true,
-                  "row" : 11,
+                  "row" : 6,
                   "col" : 0
                 },
                 "3fe74e0d-495d-f7a0-08c0-40d5a5839fb9" : {
@@ -9266,7 +9266,7 @@
                   "sizeY" : 3,
                   "preserveAspectRatio" : false,
                   "resizable" : true,
-                  "row" : 8,
+                  "row" : 13,
                   "col" : 0
                 },
                 "4441e297-0647-6dcb-bfb8-90c804403976" : {
@@ -9274,7 +9274,7 @@
                   "sizeY" : 3,
                   "preserveAspectRatio" : false,
                   "resizable" : true,
-                  "row" : 13,
+                  "row" : 8,
                   "col" : 0
                 }
               },
