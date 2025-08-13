@@ -654,7 +654,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "var v = msg.water_depth_1;\nvar lims = JSON.parse(metadata.ss_bed_1_limits).water_depth;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max) {\n    return ['max']\n} else if (v <= min) {\n    return ['min']\n} else return []"
+        "tbelScript" : "var v = msg.water_depth_1;\nvar lims = JSON.parse(metadata.ss_bed_1_limits).water_depth;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max) {\n    return ['max']\n} else if (v <= min) {\n    return ['min']\n} else return [\"\"];"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -752,7 +752,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "var v = msg.water_depth_2;\nvar lims = JSON.parse(metadata.ss_bed_2_limits).water_depth;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max) {\n    return ['max']\n} else if (v <= min) {\n    return ['min']\n} else return []"
+        "tbelScript" : "var v = msg.water_depth_2;\nvar lims = JSON.parse(metadata.ss_bed_2_limits).water_depth;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max) {\n    return ['max']\n} else if (v <= min) {\n    return ['min']\n} else return [\"\"];"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -918,7 +918,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "var v = msg.water_depth_3;\nvar lims = JSON.parse(metadata.ss_bed_3_limits).water_depth;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max) {\n    return ['max']\n} else if (v <= min) {\n    return ['min']\n} else return []"
+        "tbelScript" : "var v = msg.water_depth_3;\nvar lims = JSON.parse(metadata.ss_bed_3_limits).water_depth;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max) {\n    return ['max']\n} else if (v <= min) {\n    return ['min']\n} else return [\"\"];"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -1020,7 +1020,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "var v = msg.water_depth_4;\nvar lims = JSON.parse(metadata.ss_bed_4_limits).water_depth;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max) {\n    return ['max']\n} else if (v <= min) {\n    return ['min']\n} else return []"
+        "tbelScript" : "var v = msg.water_depth_4;\nvar lims = JSON.parse(metadata.ss_bed_4_limits).water_depth;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max) {\n    return ['max']\n} else if (v <= min) {\n    return ['min']\n} else return [\"\"];"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -1122,7 +1122,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "var manual = metadata.ss_manual_control;\nif (String(manual) === \"true\") return;\n\nvar v1 = Number(msg.water_depth_3);\nvar v2 = Number(msg.water_depth_4);\nvar lims1 = JSON.parse(metadata.ss_bed_3_limits).water_depth;\nvar max1 = Number(lims1.max);\nvar min1 = Number(lims1.min);\n\nif (v1 >= max1 || v2 >= max1) {\n  return [\"off\"];\n} else if ((v1 <= min1 || v2 <= min1) && (v1 < max1 && v2 < max1)) {\n  return [\"on\"];\n} else {\n  return [];\n}"
+        "tbelScript" : "var manual = metadata.ss_manual_control;\nif (String(manual) === \"true\") return;\n\nvar v1 = Number(msg.water_depth_3);\nvar v2 = Number(msg.water_depth_4);\nvar lims1 = JSON.parse(metadata.ss_bed_3_limits).water_depth;\nvar max1 = Number(lims1.max);\nvar min1 = Number(lims1.min);\n\nif (v1 >= max1 || v2 >= max1) {\n  return [\"off\"];\n} else if ((v1 <= min1 || v2 <= min1) && (v1 < max1 && v2 < max1)) {\n  return [\"on\"];\n} else {\nreturn [\"\"];Ï\n}"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -1206,7 +1206,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "var manual = metadata.ss_manual_control;\nif (String(manual) === \"true\") return;\n\nvar v1 = Number(msg.water_depth_1);\nvar v2 = Number(msg.water_depth_2);\nvar lims1 = JSON.parse(metadata.ss_bed_1_limits).water_depth;\nvar max1 = Number(lims1.max);\nvar min1 = Number(lims1.min);\n\nv1 = Number(v1);\nv2 = Number(v2);\n\nif (v1 >= max1 || v2 >= max1) {\n  return [\"off\"];\n} else if ((v1 <= min1 || v2 <= min1) && (v1 < max1 && v2 < max1)) {\n  return [\"on\"];\n} else {\n  return [];\n}"
+        "tbelScript" : "var manual = metadata.ss_manual_control;\nif (String(manual) === \"true\") return;\n\nvar v1 = Number(msg.water_depth_1);\nvar v2 = Number(msg.water_depth_2);\nvar lims1 = JSON.parse(metadata.ss_bed_1_limits).water_depth;\nvar max1 = Number(lims1.max);\nvar min1 = Number(lims1.min);\n\nv1 = Number(v1);\nv2 = Number(v2);\n\nif (v1 >= max1 || v2 >= max1) {\n  return [\"off\"];\n} else if ((v1 <= min1 || v2 <= min1) && (v1 < max1 && v2 < max1)) {\n  return [\"on\"];\n} else {\n  return [\"\"];\n}"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -1322,7 +1322,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "var manual = metadata.ss_manual_control;\n\nvar v = msg.light1;\nvar lims = JSON.parse(metadata.ss_bed_1_limits).light;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max && manual != \"true\") {\n    return ['max', 'max-control'];\n} else if (v >= max && manual == \"true\") {\n    return ['max'];\n} else if (v <= min && manual != \"true\") {\n    return ['min', 'min-control'];\n} else if (v <= min && manual == \"true\") {\n    return ['min'];\n} else return []"
+        "tbelScript" : "var manual = metadata.ss_manual_control;\n\nvar v = msg.light1;\nvar lims = JSON.parse(metadata.ss_bed_1_limits).light;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max && manual != \"true\") {\n    return ['max', 'max-control'];\n} else if (v >= max && manual == \"true\") {\n    return ['max'];\n} else if (v <= min && manual != \"true\") {\n    return ['min', 'min-control'];\n} else if (v <= min && manual == \"true\") {\n    return ['min'];\n} else return [\"\"]"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -1512,7 +1512,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "var manual = metadata.ss_manual_control;\n\nvar v = msg.light2;\nvar lims = JSON.parse(metadata.ss_bed_3_limits).light;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max && manual != \"true\") {\n    return ['max', 'max-control'];\n} else if (v >= max && manual == \"true\") {\n    return ['max'];\n} else if (v <= min && manual != \"true\") {\n    return ['min', 'min-control'];\n} else if (v <= min && manual == \"true\") {\n    return ['min'];\n} else return []"
+        "tbelScript" : "var manual = metadata.ss_manual_control;\n\nvar v = msg.light2;\nvar lims = JSON.parse(metadata.ss_bed_3_limits).light;\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max && manual != \"true\") {\n    return ['max', 'max-control'];\n} else if (v >= max && manual == \"true\") {\n    return ['max'];\n} else if (v <= min && manual != \"true\") {\n    return ['min', 'min-control'];\n} else if (v <= min && manual == \"true\") {\n    return ['min'];\n} else return [\"\"]"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -1702,7 +1702,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "var v = msg.tds;\n\nvar lims = JSON.parse(metadata.ss_tds_limits);\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max) {\n    return ['max']\n} else if (v <= min) {\n    return ['min']\n} else return []"
+        "tbelScript" : "var v = msg.tds;\n\nvar lims = JSON.parse(metadata.ss_tds_limits);\nvar max = lims.max;\nvar min = lims.min;\n\nif (v >= max) {\n    return ['max']\n} else if (v <= min) {\n    return ['min']\n} else return [\"\"]"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -1836,7 +1836,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "var manual = metadata.ss_manual_control;\nif (manual == \"true\") return;\n\nvar state = metadata.shared_nutrients1;\nvar schedule = JSON.parse(metadata.ss_nutrients_schedule).nutrients1;\nvar repeat = schedule.repeat;\nvar duration = schedule.duration;\nvar last = schedule.last;\nvar next = schedule.next;\nvar off = schedule.off;\n\nvar now = new Date().getTime()/1000;\n\nif (state == \"true\") {\n    //Pump is on\n    if (now >= off) {\n        //Pump needs to be turned off\n        if (now >= next) {\n            return ['off', 'update']\n        } else {\n            return ['off']\n        }\n    } else return []\n} else {\n    //Pump is off\n    if (now >= next) {\n        //Pump needs to be turned on\n        //Last, next, and off need to be updated\n        return ['on', 'update']\n    } else if (now >= last && now < off) {\n        return ['on']\n    } else return []\n}\n    "
+        "tbelScript" : "var manual = metadata.ss_manual_control;\nif (manual == \"true\") return;\n\nvar state = metadata.shared_nutrients1;\nvar schedule = JSON.parse(metadata.ss_nutrients_schedule).nutrients1;\nvar repeat = schedule.repeat;\nvar duration = schedule.duration;\nvar last = schedule.last;\nvar next = schedule.next;\nvar off = schedule.off;\n\nvar now = new Date().getTime()/1000;\n\nif (state == \"true\") {\n    //Pump is on\n    if (now >= off) {\n        //Pump needs to be turned off\n        if (now >= next) {\n            return ['off', 'update']\n        } else {\n            return ['off']\n        }\n    } else return []\n} else {\n    //Pump is off\n    if (now >= next) {\n        //Pump needs to be turned on\n        //Last, next, and off need to be updated\n        return ['on', 'update']\n    } else if (now >= last && now < off) {\n        return ['on']\n    } else return [\"\"]\n}\n    "
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -2008,7 +2008,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "var manual = metadata.ss_manual_control;\nif (manual == \"true\") return;\n\nvar state = metadata.shared_nutrients2;\nvar schedule = JSON.parse(metadata.ss_nutrients_schedule).nutrients2;\nvar repeat = schedule.repeat;\nvar duration = schedule.duration;\nvar last = schedule.last;\nvar next = schedule.next;\nvar off = schedule.off;\n\nvar now = new Date().getTime()/1000;\n\nif (state == \"true\") {\n    //Pump is on\n    if (now >= off) {\n        //Pump needs to be turned off\n        if (now >= next) {\n            return ['off', 'update']\n        } else {\n            return ['off']\n        }\n    } else return []\n} else {\n    //Pump is off\n    if (now >= next) {\n        //Pump needs to be turned on\n        //Last, next, and off need to be updated\n        return ['on', 'update']\n    } else if (now >= last && now < off) {\n        return ['on']\n    } else return []\n}\n    "
+        "tbelScript" : "var manual = metadata.ss_manual_control;\nif (manual == \"true\") return;\n\nvar state = metadata.shared_nutrients2;\nvar schedule = JSON.parse(metadata.ss_nutrients_schedule).nutrients2;\nvar repeat = schedule.repeat;\nvar duration = schedule.duration;\nvar last = schedule.last;\nvar next = schedule.next;\nvar off = schedule.off;\n\nvar now = new Date().getTime()/1000;\n\nif (state == \"true\") {\n    //Pump is on\n    if (now >= off) {\n        //Pump needs to be turned off\n        if (now >= next) {\n            return ['off', 'update']\n        } else {\n            return ['off']\n        }\n    } else return []\n} else {\n    //Pump is off\n    if (now >= next) {\n        //Pump needs to be turned on\n        //Last, next, and off need to be updated\n        return ['on', 'update']\n    } else if (now >= last && now < off) {\n        return ['on']\n    } else return [\"\"]\n}\n    "
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -2184,7 +2184,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "var manual = metadata.ss_manual_control;\nif (manual == \"true\") return;\n\nvar state = metadata.shared_nutrients3;\nvar schedule = JSON.parse(metadata.ss_nutrients_schedule).nutrients3;\nvar repeat = schedule.repeat;\nvar duration = schedule.duration;\nvar last = schedule.last;\nvar next = schedule.next;\nvar off = schedule.off;\n\nvar now = new Date().getTime()/1000;\n\nif (state == \"true\") {\n    //Pump is on\n    if (now >= off) {\n        //Pump needs to be turned off\n        if (now >= next) {\n            return ['off', 'update']\n        } else {\n            return ['off']\n        }\n    } else return []\n} else {\n    //Pump is off\n    if (now >= next) {\n        //Pump needs to be turned on\n        //Last, next, and off need to be updated\n        return ['on', 'update']\n    } else if (now >= last && now < off) {\n        return ['on']\n    } else return []\n}\n    "
+        "tbelScript" : "var manual = metadata.ss_manual_control;\nif (manual == \"true\") return;\n\nvar state = metadata.shared_nutrients3;\nvar schedule = JSON.parse(metadata.ss_nutrients_schedule).nutrients3;\nvar repeat = schedule.repeat;\nvar duration = schedule.duration;\nvar last = schedule.last;\nvar next = schedule.next;\nvar off = schedule.off;\n\nvar now = new Date().getTime()/1000;\n\nif (state == \"true\") {\n    //Pump is on\n    if (now >= off) {\n        //Pump needs to be turned off\n        if (now >= next) {\n            return ['off', 'update']\n        } else {\n            return ['off']\n        }\n    } else return []\n} else {\n    //Pump is off\n    if (now >= next) {\n        //Pump needs to be turned on\n        //Last, next, and off need to be updated\n        return ['on', 'update']\n    } else if (now >= last && now < off) {\n        return ['on']\n    } else return [\"\"]\n}\n    "
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
