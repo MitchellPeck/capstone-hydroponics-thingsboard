@@ -1122,7 +1122,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    return ['two'];\n}\nreturn nextRelation(metadata, msg);",
-        "tbelScript" : "var manual = metadata.ss_manual_control;\nif (String(manual) === \"true\") return;\n\nvar v1 = Number(msg.water_depth_3);\nvar v2 = Number(msg.water_depth_4);\nvar lims1 = JSON.parse(metadata.ss_bed_3_limits).water_depth;\nvar max1 = Number(lims1.max);\nvar min1 = Number(lims1.min);\n\nif (v1 >= max1 || v2 >= max1) {\n  return [\"off\"];\n} else if ((v1 <= min1 || v2 <= min1) && (v1 < max1 && v2 < max1)) {\n  return [\"on\"];\n} else {\nreturn [\"\"];Ï\n}"
+        "tbelScript" : "var manual = metadata.ss_manual_control;\nif (String(manual) === \"true\") return;\n\nvar v1 = Number(msg.water_depth_3);\nvar v2 = Number(msg.water_depth_4);\nvar lims1 = JSON.parse(metadata.ss_bed_3_limits).water_depth;\nvar max1 = Number(lims1.max);\nvar min1 = Number(lims1.min);\n\nif (v1 >= max1 || v2 >= max1) {\n  return [\"off\"];\n} else if ((v1 <= min1 || v2 <= min1) && (v1 < max1 && v2 < max1)) {\n  return [\"on\"];\n} else {\nreturn [\"\"];\n}"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
